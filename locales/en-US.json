@@ -1,0 +1,26 @@
+{
+  "header": {
+    "nav":{
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "services": "Services",
+      "contact": "Contact",
+      "about": "About"
+    }
+  },
+  "page_home": {
+    "content": "Home Content"
+  },
+  "page_portfolio": {
+    "content": "Portfolio Content"
+  },
+  "page_services": {
+    "content": "Services Content"
+  },
+  "page_contact": {
+    "content": "Contact Content"
+  },
+  "page_about": {
+    "content": "About Content"
+  }
+}

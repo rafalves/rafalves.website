@@ -1,0 +1,26 @@
+{
+  "header": {
+    "nav":{
+      "home": "Início",
+      "portfolio": "Portfólio",
+      "services": "Serviços",
+      "contact": "Contato",
+      "about": "Sobre"
+    }
+  },
+  "page_home": {
+    "content": "Início Conteúdo"
+  },
+  "page_portfolio": {
+    "content": "Portfólio Conteúdo"
+  },
+  "page_services": {
+    "content": "Serviços Conteúdo"
+  },
+  "page_contact": {
+    "content": "Contato Conteúdo"
+  },
+  "page_about": {
+    "content": "Sobre Conteúdo"
+  }
+}
