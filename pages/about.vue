@@ -1,3 +1,5 @@
 <template>
-  <div>{{ $t('page_about.content') }}</div>
+  <div>
+    {{ $t('page_about.content') }}
+  </div>
 </template>

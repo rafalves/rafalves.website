@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,3 +7,26 @@
 html, body, #__nuxt {
   height: 100%;
 } 
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(305, 100%, 90%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(305, 100%, 80%);
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(305, 80%, 70%);
+}
+
+@supports (scrollbar-color: hsl(305, 100%, 80%) hsl(305, 100%, 90%)) {
+  * {
+    scrollbar-color: hsl(305, 100%, 80%) hsl(305, 100%, 90%);
+    scrollbar-width: thin;
+  }
+}

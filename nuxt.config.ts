@@ -30,4 +30,7 @@ export default defineNuxtConfig({
     defaultLocale: "pt-BR",
     vueI18n: "./i18n.config.ts",
   },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
 })

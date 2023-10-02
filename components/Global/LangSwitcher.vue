@@ -1,5 +1,5 @@
 <template>
-  <div class="mr-5">
+  <div>
     <select v-model="language">
       <option v-for="item in locales" :key="item.code" :value="item.code">
         {{ item.name }}
