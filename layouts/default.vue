@@ -1,6 +1,6 @@
 <template>
   <Html :lang="htmlAttrs.lang" class="scroll-smooth">
-  <div class="flex flex-col h-full antialiased bg-slate-100">
+  <div class="flex flex-col h-full antialiased bg-[#f7eff5]">
     <header>
       <Header />
     </header>

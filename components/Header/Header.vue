@@ -1,6 +1,8 @@
 <template>
   <nav ref="nav" class="flex box-border px-10 font-poppins bg-[#F9FFFF]">
-    <h1><span>RAF</span>ALVES</h1>
+    <NuxtLink to="/playground/">
+      <h1><span>RAF</span>ALVES</h1>
+    </NuxtLink>
     <ul class="flex">
       <NuxtLink :to="localePath('/')">
         <li>

@@ -5,7 +5,7 @@
       <div v-for="box in numberOfColorBoxes" class="colorBox" />
     </div>
 
-    <section class=" pointer h-[90vh] flex justify-center pt-[20%] box-border font-poppins">
+    <section class=" pointer h-[90vh] flex justify-center pt-[15%] box-border font-poppins">
       <div class="text-center backdrop-blur-[1px]">
         <h1 class="text-[3.4rem] font-semibold"><span class="text-[#EC4899]"></span>
           Background (CSS)</h1>
@@ -20,7 +20,7 @@
     </section>
 
     <section class="h-screen bg-green-200">
-      <div ref="section" class="scrollObserver flex flex-col text-justify gap-5 items-center mx-48">
+      <div ref="section" class="scrollObserver flex flex-col text-justify gap-5 items-center md:mx-48">
         <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h1>
         <h2 class="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, neque.
         </h2>
@@ -71,8 +71,8 @@
       </div>
     </section>
 
-    <section class="h-full bg-blue-200 py-10">
-      <div ref="section2" class="scrollObserver flex flex-col text-justify gap-5 items-center mx-48">
+    <section class="min-h-full bg-blue-200 py-10">
+      <div ref="section2" class="scrollObserver flex flex-col text-justify gap-5 items-center md:mx-48">
         <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h1>
         <h2 class="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, neque.
         </h2>
@@ -92,7 +92,7 @@
       </div>
     </section>
 
-    <section id="rag" class="bg-orange-400 py-10">
+    <section class="bg-orange-400 py-10">
       <h1 class="text-center text-2xl font-bold font-poppins mb-10">Ragnarok Images</h1>
       <div class="flex gap-5 mx-10">
         <div class="logo ">
@@ -157,43 +157,12 @@ useIntersectionObserver(
       if (entry.isIntersecting) {
         console.log("ragnarokImages: " + entry.target.tagName + " " + entry.isIntersecting)
         entry.target.classList.add('show')
-      } else if (!entry.isIntersecting) {
+      } else {
         console.log("ragnarokImages: " + entry.target.tagName + " " + entry.isIntersecting)
         entry.target.classList.remove('show')
-
       }
     })
-  },
-)
-
-//   function scrollToDivOnEnter() {
-//   const divToScroll = document.getElementById('suaDiv'); // Substitua 'suaDiv' pelo ID da sua div
-//   const rect = divToScroll.getBoundingClientRect();
-
-//   // Verifique se a div está visível na janela de visualização
-//   if (rect.top && rect.top >= 0 && rect.bottom <= window.innerHeight) {
-//     // A div está totalmente visível na janela de visualização
-//     // Role a div para o topo
-//     window.scrollTo({
-//       top: rect.top + window.scrollY,
-//       behavior: 'smooth', // Role suavemente
-//     });
-//   }
-// }
-
-
-
-
-// watchEffect(() => {
-//   if (sectionIsVisible2.value) {
-//     console.log("section 2: " + sectionIsVisible2.value)
-//     section2.value?.classList.add('show')
-//   }
-//   if (!sectionIsVisible2.value) {
-//     section2.value?.classList.remove('show')
-//     console.log("section 2: " + sectionIsVisible2.value)
-//   }
-// })
+  })
 
 
 </script> 
@@ -224,7 +193,7 @@ useIntersectionObserver(
 
 .scrollObserver2 {
   opacity: 0;
-  transition: all 1s;
+  transition: all 2s;
   filter: blur(5px);
   transform: translateX(-200%);
 }
