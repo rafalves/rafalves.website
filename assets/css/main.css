@@ -10,8 +10,12 @@ html, body, #__nuxt {
 
 ::-webkit-scrollbar {
   width: 0.5em;
+  height: 0.5em;
 }
 
+::-webkit-scrollbar-corner {
+  background: hsl(305, 100%, 90%);
+}
 ::-webkit-scrollbar-track {
   background: hsl(305, 100%, 90%);
 }
