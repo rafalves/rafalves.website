@@ -7,7 +7,7 @@
 
     <section class=" pointer h-[90vh] flex justify-center pt-[15%] box-border font-poppins">
       <div class="text-center backdrop-blur-[1px]">
-        <h1 class="text-[3.4rem] font-semibold"><span class="text-[#EC4899]"></span>
+        <h1 class="text-[3.4rem] font-semibold"><span class="text-[#EC4899]">Animated</span>
           Background (CSS)</h1>
         <p class="text-[1.3rem]">Fast Track Your Web Development Career with Our Team! <br>
           Learn Web Development from Beginning with live coding sessions on your Laptop!</p>

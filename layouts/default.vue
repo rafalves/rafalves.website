@@ -36,7 +36,7 @@ const head = useLocaleHead({
 const htmlAttrs = computed(() => head.value.htmlAttrs!)
 
 onMounted(() => {
-  if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV) {
     // Work around for https://github.com/nuxt/nuxt/issues/13350
     // @TODO Remove when fixed
     if (typeof window !== 'undefined') {
