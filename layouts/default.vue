@@ -34,6 +34,28 @@ const head = useLocaleHead({
 })
 
 const htmlAttrs = computed(() => head.value.htmlAttrs!)
+
+onMounted(() => {
+  if (process.env.NODE_ENV !== 'development') {
+    // Work around for https://github.com/nuxt/nuxt/issues/13350
+    // @TODO Remove when fixed
+    if (typeof window !== 'undefined') {
+      window.addEventListener('error', (ev) => {
+        const messages = [
+          `Uncaught NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.`, // Chromium
+          `NotFoundError: Node.insertBefore: Child to insert before is not a child of this node`, // Firefox
+          `NotFoundError: The object can not be found here.` // Safari
+        ]
+
+        if (messages.some((message) => ev.message.includes(message))) {
+          console.warn('Reloading due to error: https://github.com/nuxt/nuxt/issues/13350')
+          ev.preventDefault()
+          window.location.reload()
+        }
+      })
+    }
+  }
+})
 </script>
 
 <style>
