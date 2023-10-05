@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-polygon-h-10 {
+    clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
+  }
+  .clip-polygon-none {
+    clip-path: none;
+  }
+}
+
 html, body, #__nuxt {
   height: 100%;
 } 

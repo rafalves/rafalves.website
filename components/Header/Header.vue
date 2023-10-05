@@ -1,12 +1,12 @@
 <template>
   <nav ref="nav" class="flex box-border px-10 font-poppins bg-[#F9FFFF]">
-    <NuxtLink to="/playground/">
+    <NuxtLink to="/">
       <h1><span>RAF</span>ALVES</h1>
     </NuxtLink>
     <ul class="flex">
-      <NuxtLink :to="localePath('/')">
+      <NuxtLink :to="localePath('/playground/')">
         <li>
-          {{ $t('header.nav.home') }}
+          {{ $t('header.nav.playground') }}
         </li>
       </NuxtLink>
 

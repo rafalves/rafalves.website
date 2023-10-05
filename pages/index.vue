@@ -2,22 +2,59 @@
   <div class="relative">
     <div class="bgAnimation">
       <div class="backgroundAmim" />
-      <div v-for="box in numberOfColorBoxes" class="colorBox" />
+      <div v-for="box in 400" class="colorBox" />
     </div>
 
-    <section class=" pointer h-[90vh] flex justify-center pt-[15%] box-border font-poppins">
-      <div class="text-center backdrop-blur-[1px]">
-        <h1 class="text-[3.4rem] font-semibold"><span class="text-[#EC4899]">Animated</span>
-          Background (CSS)</h1>
-        <p class="text-[1.3rem]">Fast Track Your Web Development Career with Our Team! <br>
-          Learn Web Development from Beginning with live coding sessions on your Laptop!</p>
-        <button
-          class="homeBtn my-4 mx-3 bg-transparent text-lg py-2 px-[18px] border-[3px] border-black hover:border-[#EC4899] rounded cursor-pointer mr-1 text-black hover:text-white hover:bg-[#EC4899] font-semibold hover:bg-">Join
-          Us</button>
-        <button
-          class="homeBtn my-4 mx-3 bg-transparent text-lg py-2 px-[18px]  border-[3px] border-[#EC4899] rounded cursor-pointer text-[#EC4899] hover:text-white hover:bg-black hover:border-black font-semibold">EXPLORE</button>
+    <section
+      class="pointer h-[90dvh] md:h-[90vh] flex justify-center  box-border font-poppins flex-col-reverse md:flex-row relative">
+
+      <div class="text-center backdrop-blur-[1px] text-slate-800 md:max-w-[50%] md:mt-[8%]">
+
+        <h1 class="text-3xl md:text-[3.4rem] mx-5 font-semibold tracking-wider leading-snug text-black ">
+          <span class="text-[#EC4899]">
+            {{ t('section_home.title.t1') }}
+          </span>
+          {{ t('section_home.title.t2') }}
+          <span class="text-[#EC4899]">{{ t('section_home.title.t3') }}
+          </span>
+        </h1>
+        <div class="md:h-10" />
+        <p class="text-[1.2rem] font-medium mt-2">
+          {{ t('section_home.description.p1') }}
+        </p>
+
+        <p class="text-[1.2rem] font-medium mt-2">
+          {{ t('section_home.description.p2') }}
+        </p>
+
+        <p class="text-[1.2rem] font-medium mt-2">
+          {{ t('section_home.description.p3') }}
+          <Icon name="fluent-emoji-flat:rocket" size="35px" />
+        </p>
+
+        <div class="md:h-5" />
+
+        <NuxtLink :to="localePath('/portfolio')">
+          <button
+            class="homeBtn md:mr-10 my-4 mx-3 bg-transparent text-lg py-2 px-[18px] border-[3px] border-black hover:border-[#EC4899] rounded cursor-pointer mr-1 text-black hover:text-white hover:bg-[#EC4899] font-semibold hover:bg-">
+            {{ t('section_home.btns.portfolio') }}
+          </button>
+        </NuxtLink>
+        <NuxtLink :to="localePath('/contact')">
+          <button
+            class="homeBtn my-4 mx-3 bg-transparent text-lg py-2 px-[18px]  border-[3px] border-[#EC4899] rounded cursor-pointer text-[#EC4899] hover:text-white hover:bg-black hover:border-black font-semibold">
+            {{ t('section_home.btns.contact') }}
+          </button>
+        </NuxtLink>
+
+      </div>
+
+      <div class="backdrop-blur-[1px] flex justify-center">
+        <img class="-mt-[5%] h-[40vh] md:h-fit md:max-h-[70vh] w-auto -mb-[10%]" src="/img/hero.gif" :alt="heroAlt">
       </div>
     </section>
+
+    <div class="h-5 bg-white md:hidden" />
 
     <section class="h-screen bg-green-200">
       <div ref="section" class="scrollObserver flex flex-col text-justify gap-5 items-center md:mx-48">
@@ -119,13 +156,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import { useIntersectionObserver } from '@vueuse/core'
 const { t } = useI18n({
   useScope: 'local'
 })
+const localePath = useLocalePath()
 
-const numberOfColorBoxes = 400;
+const heroAlt = ref(t('section_home.gif_alt'))
 
 const section = ref<HTMLElement | null>(null)
 const section2 = ref<HTMLElement | null>(null)
@@ -133,7 +171,6 @@ const rag2 = ref<HTMLElement | null>(null)
 const rag3 = ref<HTMLElement | null>(null)
 const rag4 = ref<HTMLElement | null>(null)
 const rag5 = ref<HTMLElement | null>(null)
-const imgVisible = ref(false)
 const sections = [section, section2]
 
 
@@ -222,7 +259,7 @@ useIntersectionObserver(
   filter: brightness(1.1);
   transition: 2s ease;
   position: relative;
-  margin: 1px;
+  margin: 2px;
   background: #E2E8F0;
 }
 
@@ -265,15 +302,51 @@ useIntersectionObserver(
     top: 120%;
   }
 }
+
+.polygon {
+  clip-path: polygon(0 20%, 100% 10%, 100% 90%, 0 90%);
+}
 </style>
 
 <i18n lang="json">
 {
-  "en-US": {
-    "hello": "hello world!"
-  },
   "pt-BR": {
-    "hello": "こんにちは、世界!"
+    "section_home": {
+      "title": {
+        "t1": "Transforme",
+        "t2": "Ideias em",
+        "t3": "Realidade"
+      },
+      "description": {
+        "p1": "Criamos Aplicativos Mobile, Web e Servidores Sob Medida",
+        "p2": "Potencialize sua Presença Online com SEO de Alto Desempenho",
+        "p3": "Vamos criar algo incrível juntos!"
+      },
+      "btns": {
+        "portfolio": "Portfólio",
+        "contact": "Contato"
+      },
+      "gif_alt": "Hero gif animado"
+    }
+  },
+  "en-US": {
+    "section_home": {
+      "title": {
+        "t1": "Transform",
+        "t2": "Ideas into",
+        "t3": "Reality"
+      },
+      "description": {
+        "p1": "We create Mobile Application, Websites and Server on Demand",
+        "p2": "Boost your Online Presence with High Performance SEO",
+        "p3": "Let's create something amazing together!"
+      },
+      "btns": {
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "gif_alt": "Animated hero gif"
+    }
   }
 }
-</i18n>
+</i18n> 
