@@ -1,6 +1,5 @@
 <template>
-  <div>
-
+  <div class="">
     <section class="h-screen bg-green-200">
       <div ref="section" class="scrollObserver flex flex-col text-justify gap-5 items-center md:mx-48">
         <h1 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h1>

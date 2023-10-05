@@ -37,21 +37,6 @@ const { t, rt, tm } = useI18n({
     // posts
     "posts": {
       // add post by most recent
-      "3": {
-        "title": "05/09/2023 - Titulo Post 3",
-        "description": "Post 3 descrição",
-        "link": "/intersection-observer"
-      },
-      "4": {
-        "title": "06/09/2023 - Titulo Post 4",
-        "description": "Post 4 deddddddscrição",
-        "link": "/intersection-observer"
-      },
-      "2": {
-        "title": "04/09/2023 - Titulo Post 2",
-        "description": "Post 2 descddddddddrição",
-        "link": "/intersection-observer"
-      },
       "1": {
         "title": "03/09/2023 - Intersection Observer API",
         "description": "Intersection Observer é uma Web API fornecida pelos navegadores, com ela você consegue observar elementos e ser notificado quando eles adentram em determinado ponto da tela, pode ser usado para ativar animações, transições, rolagem infinita e muito mais. A vantagem do Intersection Observer API é não depender de um ouvinte e assim economizar recursos do processo principal.",
@@ -68,21 +53,6 @@ const { t, rt, tm } = useI18n({
       "1": {
         "title": "03/09/2023 - Intersection Observer API",
         "description": "Intersection Observer is a Web API provided by the browsers, with it is possible to observe elements and be notified when they reach some threshold of the view, can be used to trigger animations, transitions, infinite scroll, and much more. The advantage of Intersection Observer API is not dependent on listeners saving resources of the main thread.",
-        "link": "/intersection-observer"
-      },
-      "2": {
-        "title": "04/09/2023 - Title Post 2",
-        "description": "Description post 2",
-        "link": "/intersection-observer"
-      },
-      "3": {
-        "title": "05/09/2023 - Title Post 4",
-        "description": "Description post 4",
-        "link": "/intersection-observer"
-      },
-      "4": {
-        "title": "05/09/2023 - Title Post 3",
-        "description": "Description post 3",
         "link": "/intersection-observer"
       }
     }
