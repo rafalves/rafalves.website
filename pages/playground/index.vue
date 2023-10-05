@@ -6,10 +6,12 @@
 
       <div class="flex flex-col-reverse">
         <div v-for="post in tm('posts')" :key="post">
-          <h2 class="font-bold text-xl">
-            {{ rt(post.title) }}
-          </h2>
-          <p>{{ rt(post.description) }}</p>
+          <NuxtLink class="hover:underline hover:text-[#EC4899]" :to="'/playground' + rt(post.link)">
+            <h2 class="font-bold text-xl">
+              {{ rt(post.title) }}
+            </h2>
+          </NuxtLink>
+          <p class="text-justify md:ml-14 my-2">{{ rt(post.description) }}</p>
         </div>
       </div>
       <!-- {{ t('posts.1.description') }} -->
@@ -37,19 +39,23 @@ const { t, rt, tm } = useI18n({
       // add post by most recent
       "3": {
         "title": "05/09/2023 - Titulo Post 3",
-        "description": "Post 3 descrição"
+        "description": "Post 3 descrição",
+        "link": "/intersection-observer"
       },
       "4": {
         "title": "06/09/2023 - Titulo Post 4",
-        "description": "Post 4 deddddddscrição"
+        "description": "Post 4 deddddddscrição",
+        "link": "/intersection-observer"
       },
       "2": {
         "title": "04/09/2023 - Titulo Post 2",
-        "description": "Post 2 descddddddddrição"
+        "description": "Post 2 descddddddddrição",
+        "link": "/intersection-observer"
       },
       "1": {
         "title": "03/09/2023 - Intersection Observer API",
-        "description": "Intersection Observer é uma Web API fornecida pelos navegadores, com ela você consegue observar elementos e ser notificado quando eles adentram em determinado ponto da tela, pode ser usado para ativar animações, transições, rolagem infinita e muito mais. A vantagem do Intersection Observer API é não depender de um ouvinte e assim economizar recursos do processo principal."
+        "description": "Intersection Observer é uma Web API fornecida pelos navegadores, com ela você consegue observar elementos e ser notificado quando eles adentram em determinado ponto da tela, pode ser usado para ativar animações, transições, rolagem infinita e muito mais. A vantagem do Intersection Observer API é não depender de um ouvinte e assim economizar recursos do processo principal.",
+        "link": "/intersection-observer"
       }
     }
   },
@@ -61,19 +67,23 @@ const { t, rt, tm } = useI18n({
       // add post by most recent
       "1": {
         "title": "03/09/2023 - Intersection Observer API",
-        "description": "Intersection Observer is a Web API provided by the browsers, with it is possible to observe elements and be notified when they reach some threshold of the view, can be used to trigger animations, transitions, infinite scroll, and much more. The advantage of Intersection Observer API is not dependent on listeners saving resources of the main thread."
+        "description": "Intersection Observer is a Web API provided by the browsers, with it is possible to observe elements and be notified when they reach some threshold of the view, can be used to trigger animations, transitions, infinite scroll, and much more. The advantage of Intersection Observer API is not dependent on listeners saving resources of the main thread.",
+        "link": "/intersection-observer"
       },
       "2": {
         "title": "04/09/2023 - Title Post 2",
-        "description": "Description post 2"
+        "description": "Description post 2",
+        "link": "/intersection-observer"
       },
       "3": {
         "title": "05/09/2023 - Title Post 4",
-        "description": "Description post 4"
+        "description": "Description post 4",
+        "link": "/intersection-observer"
       },
       "4": {
         "title": "05/09/2023 - Title Post 3",
-        "description": "Description post 3"
+        "description": "Description post 3",
+        "link": "/intersection-observer"
       }
     }
   }
