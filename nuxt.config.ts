@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "pt-BR",
     vueI18n: "./i18n.config.ts",
+    baseUrl: "https://www.rafalves.website"
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
