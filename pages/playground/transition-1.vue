@@ -11,7 +11,7 @@
       </div>
 
       With paragraph 📄
-      <div class="quick-example ">
+      <div class="quick-example">
         <div class="gap-3 flex flex-col">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolores eligendi tempore adipisci reiciendis
             accusamus odit iure autem consequuntur, repudiandae distinctio rem, excepturi esse saepe nam. Harum expedita
@@ -107,11 +107,14 @@
 }
 
 .quick-example>div {
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .quick-example:hover {
   grid-template-rows: 1fr;
-  transition: grid-template-rows 500ms;
+  transition: grid-template-rows 500ms ease-in-out;
+}
+.quick-example:not(:hover) {
+  transition: grid-template-rows 1000ms ease-in-out;  
 }
 </style>
