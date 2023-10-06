@@ -15,10 +15,12 @@
 
           <div class="flex gap-5">
             <ul v-for="project in post.projects">
-              <NuxtLink class="hover:text-purple-700 text-pink-500 font-semibold underline"
-                :to="'/playground' + rt(project.link)">
-                <li>{{ rt(project.name) }}</li>
-              </NuxtLink>
+              <li>
+                <NuxtLink class="hover:text-purple-700 text-pink-500 font-semibold underline"
+                  :to="'/playground' + rt(project.link)">
+                  {{ rt(project.name) }}
+                </NuxtLink>
+              </li>
             </ul>
           </div>
 
