@@ -103,8 +103,8 @@
 </template>
 
 <script setup lang="ts">
-
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
+import { useIntersectionObserver } from '@vueuse/core'
 
 const section = ref<HTMLElement | null>(null)
 const section2 = ref<HTMLElement | null>(null)
