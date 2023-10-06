@@ -4,35 +4,35 @@
       <h1><span>RAF</span>ALVES</h1>
     </NuxtLink>
     <ul class="flex">
-      <NuxtLink :to="localePath('/playground/')">
-        <li>
+      <li>
+        <NuxtLink :to="localePath('/playground/')">
           {{ $t('header.nav.playground') }}
-        </li>
-      </NuxtLink>
+        </NuxtLink>
+      </li>
 
-      <NuxtLink :to="localePath('/portfolio')">
-        <li>
+      <li>
+        <NuxtLink :to="localePath('/portfolio')">
           {{ $t('header.nav.portfolio') }}
-        </li>
-      </NuxtLink>
+        </NuxtLink>
+      </li>
 
-      <NuxtLink :to="localePath('/services')">
-        <li>
+      <li>
+        <NuxtLink :to="localePath('/services')">
           {{ $t('header.nav.services') }}
-        </li>
-      </NuxtLink>
+        </NuxtLink>
+      </li>
 
-      <NuxtLink :to="localePath('/contact')">
-        <li>
+      <li>
+        <NuxtLink :to="localePath('/contact')">
           {{ $t('header.nav.contact') }}
-        </li>
-      </NuxtLink>
+        </NuxtLink>
+      </li>
 
-      <NuxtLink :to="localePath('/about')">
-        <li>
+      <li>
+        <NuxtLink :to="localePath('/about')">
           {{ $t('header.nav.about') }}
-        </li>
-      </NuxtLink>
+        </NuxtLink>
+      </li>
     </ul>
 
     <div class="">
