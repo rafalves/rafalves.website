@@ -10,20 +10,7 @@
 
       </div>
 
-      Large content
-      <div class="quick-example">
-        <div>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut temporibus autem, officiis tempore reprehenderit
-          doloremque ipsum sit asperiores perferendis omnis atque quaerat cumque totam sint at quibusdam esse explicabo
-          illum suscipit consectetur optio sunt, distinctio vel numquam! Iste sit voluptate distinctio voluptates nesciunt
-          aliquid minus voluptatem, blanditiis voluptatum? Beatae, eaque blanditiis libero officia aliquid, voluptate
-          consequuntur odio minima, labore itaque corrupti id error molestias quidem doloribus sint facere quisquam
-          asperiores excepturi fugiat vero rem provident repellendus? Repellat alias, consectetur cumque veniam est
-          quaerat expedita, accusantium sunt quibusdam similique, possimus ad ea velit consequuntur doloremque distinctio
-          qui minima soluta eos praesentium?
-        </div>
-      </div>
-      With paragraph
+      With paragraph 📄
       <div class="quick-example ">
         <div class="gap-3 flex flex-col">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolores eligendi tempore adipisci reiciendis
@@ -40,11 +27,75 @@
             deserunt dolor quo inventore.</p>
         </div>
       </div>
+
+    Transform hover the 📦
+
+    <div class="flex gap-2 mt-3 ease-in-out duration-300 text-center"> 
+      <div class="box1 ease-in-out duration-300 h-32 w-32 bg-indigo-500 flex justify-center items-center">
+        Rotate
+      </div>
+      <div class="box2 ease-in-out duration-300 h-32 w-32 bg-indigo-500 flex justify-center items-center">
+        Scale
+      </div>
+      <div class="box3 ease-in-out duration-300 h-32 w-32 bg-indigo-500 flex justify-center items-center">
+        TranslateX 👉🏽
+      </div>
+      <div class="box4 ease-in-out duration-300 h-32 w-32 bg-indigo-500 flex justify-center items-center">
+        Translate Diagonal 
+      </div>
+      <div class="relative">
+        <div class="box5 ease-in-out duration-300 h-32 w-32 bg-indigo-500 flex justify-center items-center pt-5">
+          Centering absolute element with translate
+        </div>
+      </div>
+      <div class="box6 ease-in-out duration-300 h-32 w-32 bg-indigo-500 flex justify-center items-center">
+        Translate Skew 
+      </div>
+      <div class="box7 ease-in-out duration-300 h-32 w-32 bg-indigo-500 flex justify-center items-center">
+        Combining 
+      </div>
+       
     </div>
+
+
+  </div>
   </div>
 </template>
-
 <style scoped>
+.box7:hover {
+  transform: rotate(30deg) scaleX(.75) translate(40px); 
+}
+.box6:hover {
+  transform: Skew(30deg, -40deg); 
+}
+.box5::after {
+  content: 'Absolute';
+  background: red;
+  position: absolute; 
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);  
+} 
+.box5:hover {
+  position: relative;  
+  display: flex;
+}
+.box4:hover {
+  transform: translate(30px, -40px); 
+}
+.box3:hover {
+  transform: translate(30px); 
+}
+.box3:hover {
+  transform: translate(30px); 
+}
+.box2:hover {
+  transform: scale(.5, .5); 
+}
+.box1:hover {
+  transform: rotate(24deg); 
+}
+
 .quick-example {
   margin: 1rem;
   padding: 1rem;
