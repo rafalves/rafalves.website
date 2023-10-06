@@ -179,6 +179,7 @@ const heroAlt = ref(t('section_home.gif_alt'))
 <i18n lang="json">
 {
   "pt-BR": {
+    "page_title": "testes PTBRRRRRRRRR",
     "section_home": {
       "title": {
         "t1": "Transforme",
@@ -201,6 +202,7 @@ const heroAlt = ref(t('section_home.gif_alt'))
     }
   },
   "en-US": {
+    "page_title": "testes USSSSSSSSSS",
     "section_home": {
       "title": {
         "t1": "Transform",
