@@ -12,7 +12,7 @@
 
       <!-- <div class="h-full p-5 bg-slate-300 mx-auto max-w-[58rem]">
       </div> -->
-      <div class="h-full">
+      <div class="">
 
         <slot />
       </div>

@@ -1,6 +1,6 @@
 <template>
-  <div class="h-full antialiased">
-    <div class="h-full mx-auto max-w-[58rem] font-sans ">
+  <div class=" antialiased">
+    <div class=" mx-auto max-w-[58rem] font-sans ">
 
       <p class="mt-10 text-center italic text-base text-slate-700">{{ t('description') }}</p>
 
@@ -36,34 +36,37 @@ const { t, rt, tm } = useI18n({
   useScope: 'local'
 })
 
+useSeoMeta({
+  title: t('seo.page_title'),
+  description: t('seo.meta_description')
+})
 
 </script>
 
 
 
 <i18n lang="json">
-// add post by most recent
-//template
-// "1": {
-//   "title": " ",
-//   "description": " ",
-//   "projects": {
-//     "1": {
-//       "name": " ",
-//       "link": " "
-//     },
-//     "2": {
-//       "name": " ",
-//       "link": " "
-//     }
-//   }
-// },
 {
   "pt-BR": {
     "title": "Lista de Projetos",
     "description": "Esta página é dedicada a testes de funcionalidades e validação de conceitos",
+    "seo": {
+      "page_title": "Playground - Rafalves.Website",
+      "meta_description": "Esta página é dedicada a testes de funcionalidades e validação de conceitos"
+    },
     // posts
     "posts": {
+      // add post by most recent 
+      "3": {
+        "title": "07/10/2023 - Menu NavBar com apenas CSS",
+        "description": "Simples menu com apenas CSS e input checkbox para transicionar o estado aberto/fechado",
+        "projects": {
+          "1": {
+            "name": "transição simples",
+            "link": "/navbar-css-only"
+          }
+        }
+      },
       "2": {
         "title": "06/10/2023 - Transições e Transformações",
         "description": "Animações usando transition e transform",
@@ -90,12 +93,29 @@ const { t, rt, tm } = useI18n({
       }
     }
   },
+  //
+  // EN
+  //
   "en-US": {
-    "title": "Projects of List",
+    "title": "List of Project",
     "description": "This page is dedicated to testing functionalities and concept validation",
+    "seo": {
+      "page_title": "Playground - Rafalves.Website",
+      "meta_description": "This page is dedicated to testing functionalities and concept validation"
+    },
     // posts
     "posts": {
       // add post by most recent
+      "3": {
+        "title": "10/07/2023 - NavBar Menu with only CSS",
+        "description": "Simple menu with only css, and input checkbox for holding state close/open",
+        "projects": {
+          "1": {
+            "name": "transição simples",
+            "link": "/navbar-css-only"
+          }
+        }
+      },
       "2": {
         "title": "10/06/2023 - Transitions and Transforms",
         "description": "Animation using transition and transform",
