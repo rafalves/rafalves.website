@@ -61,6 +61,7 @@
   </div>
   </div>
 </template>
+
 <style scoped>
 .box7:hover {
   transform: rotate(30deg) scaleX(.75) translate(40px); 
@@ -115,6 +116,6 @@
   transition: grid-template-rows 500ms ease-in-out;
 }
 .quick-example:not(:hover) {
-  transition: grid-template-rows 1000ms ease-in-out;  
+  transition: grid-template-rows 500ms ease-in-out;  
 }
 </style>
