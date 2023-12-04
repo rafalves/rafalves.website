@@ -1,6 +1,6 @@
 <template>
-  <Html :lang="htmlAttrs.lang" class="scroll-smooth">
-  <div class="flex flex-col h-full antialiased bg-[#f7eff5]">
+  <Html :lang="htmlAttrs.lang" class="scroll-smooth bg-[#f7eff5]">
+  <div class="flex flex-col h-full antialiased ">
     <header>
       <Header />
     </header>
@@ -12,7 +12,7 @@
 
       <!-- <div class="h-full p-5 bg-slate-300 mx-auto max-w-[58rem]">
       </div> -->
-      <div class="">
+      <div>
 
         <slot />
       </div>
