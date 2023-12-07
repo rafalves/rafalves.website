@@ -148,6 +148,7 @@
       <div class="p-5">
         <h1 class="text-2xl tablet:text-3xl md:text-4xl  font-extrabold">Portfólio</h1>
         <p>Alguns dos meus trabalhos:</p>
+
         <div class="flex flex-col md:flex-row justify-between gap-3 mt-[15px]">
           <div class="w-full">
             <p class="text-xl font-bold text-center my-4">Página de Captura</p>
@@ -156,7 +157,16 @@
                 <img class="rounded-xl" src="/img/portfolio-1-pedro-sobral.webp" alt="Página de Captura">
               </NuxtLink>
             </div>
+
+            <p class="text-center font-medium">
+              <NuxtLink class="link link-hover" to="https://port folio-landing-page-pedro-sobral.vercel.app"
+                target="_blank">Demonstração ao Vivo</NuxtLink>
+            </p>
+            <p class="text-center font-medium">
+              <NuxtLink class="link link-hover" to="/portfolio/lp-pedro-sobral" target="_self">Sobre o Projeto</NuxtLink>
+            </p>
           </div>
+
           <div class="w-full">
             <p class="text-xl font-bold text-center my-4">Projeto Pessoal</p>
             <div class="flex justify-center mb-4">
@@ -164,7 +174,18 @@
                 <img class="rounded-xl" src="/img/portfolio-2-mco.webp" alt="Projeto Pessoal">
               </NuxtLink>
             </div>
+
+            <p class="text-center font-medium">
+              <NuxtLink class="link link-hover" to="https://www.melhores-compras.online" target=" _blank">Demonstração ao
+                Vivo</NuxtLink>
+            </p>
+            <p class="text-center font-medium">
+              <NuxtLink class="link link-hover" to="/portfolio/melhores-compras-online" target="_self">Sobre o Projeto
+              </NuxtLink>
+            </p>
           </div>
+
+
           <div class="w-full">
             <p class="text-xl font-bold text-center my-4">Buscador de Filmes</p>
             <div class="flex justify-center mb-4">
@@ -172,6 +193,16 @@
                 <img class="rounded-xl" src="/img/portfolio-3-movies.webp" alt="Nuxt Movies App">
               </NuxtLink>
             </div>
+
+            <p class="text-center font-medium">
+              <NuxtLink class="link link-hover" to="https://nuxt-movie-website.vercel.app/" target=" _blank">Demonstração
+                ao
+                Vivo</NuxtLink>
+            </p>
+            <p class="text-center font-medium">
+              <NuxtLink class="link link-hover" to="/portfolio/movie-app" target="_self">Sobre o Projeto
+              </NuxtLink>
+            </p>
           </div>
         </div>
       </div>

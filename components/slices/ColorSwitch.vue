@@ -33,11 +33,8 @@ const isDarkTheme = computed(() => colorMode.value === 'dark' ? '' : 'saturate-0
 
 
 watchEffect(() => {
-  console.log(colorMode.value)
   if (colorThemes.includes(colorMode.value)) {
-    console.log('tem')
   }
-  console.log(isRandomTheme.value)
 })
 
 
