@@ -23,16 +23,16 @@
             <SlicesColorSwitch />
           </div>
 
-          <p class="text-center text-xl font-extrabold opacity-80">Links Úteis</p>
+          <p class="text-center text-xl font-extrabold opacity-80">{{ t('links') }}</p>
           <ul>
             <li>
-              <NuxtLink>Quem sou</NuxtLink>
+              <NuxtLink :to="localePath('/about')" class="link link-hover">{{ t('about') }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink>Portfólio</NuxtLink>
+              <NuxtLink :to="localePath('/portfolio')" class="link link-hover">{{ t('portfolio') }}</NuxtLink>
             </li>
             <li>
-              <NuxtLink>Contato</NuxtLink>
+              <NuxtLink :to="localePath('/contact')" class="link link-hover">{{ t('contact') }}</NuxtLink>
             </li>
           </ul>
         </nav>
@@ -40,16 +40,16 @@
         <footer class="footer footer-center text-base-content rounded mb-10">
           <nav>
             <div class="grid grid-flow-col gap-4">
-              <NuxtLink to="" target="_blank">
+              <NuxtLink to="https://github.com/rafalves" target="_blank">
                 <Icon name="devicon:linkedin" size="25" />
               </NuxtLink>
-              <NuxtLink to="" target="_blank">
-                <Icon name="bi:github" size="25" color="gray" />
+              <NuxtLink to="https://www.linkedin.com/in/rafael-alves-costa/" target="_blank">
+                <Icon name="bi:github" size="25" />
               </NuxtLink>
             </div>
           </nav>
           <aside>
-            <p class="px-2 tablet:px-5">Copyright © 2023 | rafalves.website - Todos os direitos reservados</p>
+            <p class="px-2 tablet:px-5">Copyright © 2023 | rafalves.website - {{ t('rights') }}</p>
           </aside>
         </footer>
       </aside>
@@ -59,6 +59,10 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n({
+  useScope: 'local',
+})
+const localePath = useLocalePath()
 
 const isOpen = ref(false);
 
@@ -93,3 +97,23 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
   opacity: 0;
 }
 </style>
+
+<i18n lang="json">
+{
+  "pt-BR": {
+    "about": "Quem sou",
+    "portfolio": "Portfólio",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados",
+    "links": "Links Úteis"
+  },
+  "en-US": {
+    "about": "Who am I",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "rights": "All rights reserved",
+    "links": "Useful Links"
+  }
+}
+</i18n>
+ 

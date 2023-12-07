@@ -12,16 +12,21 @@
 
       <div class="hidden md:flex gap-3">
         <div class="flex gap-3 pt-1">
+
           <ul class="flex gap-3">
             <li class="italic hover:underline">
               <NuxtLink :to="localePath('/about')">
                 {{ t('about') }}
               </NuxtLink>
             </li>
-
             <li class="italic hover:underline">
               <NuxtLink :to="localePath('/portfolio')">
                 {{ t('portfolio') }}
+              </NuxtLink>
+            </li>
+            <li class="italic hover:underline">
+              <NuxtLink :to="localePath('/contact')">
+                {{ t('contact') }}
               </NuxtLink>
             </li>
           </ul>
@@ -43,11 +48,13 @@
 {
   "pt-BR": {
     "about": "Quem sou",
-    "portfolio": "Portfólio"
+    "portfolio": "Portfólio",
+    "contact": "Contato"
   },
   "en-US": {
     "about": "Who am I",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "contact": "Contact"
   }
 }
 </i18n>

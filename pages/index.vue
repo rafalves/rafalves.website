@@ -1,9 +1,8 @@
 <script setup lang="ts">
-// const { t } = useI18n({
-//   useScope: 'local',
-// })
-// const localePath = useLocalePath()
-
+const { t, rt, tm } = useI18n({
+  useScope: 'local',
+})
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -14,15 +13,12 @@
 
         <div class="bg-accent tablet:w-1/2 rounded-3xl pb-5">
           <div class="flex flex-col gap-3 mt-[7%] mx-5">
-            <p class="text-2xl tablet:text-3xl md:text-4xl font-bold">Desenvolvedor Full Stack</p>
-            <p class="text-justify ">Um entusiasta Full Stack em constante evolução. Deixe-me guiá-lo por minha jornada
-              no
-              mundo do
-              desenvolvimento, destacando minhas habilidades, projetos e experiências. Vamos construir algo incrível
-              juntos!
+            <p class="text-2xl tablet:text-3xl md:text-4xl font-bold">{{ t('section_1.title') }}</p>
+            <p class="text-justify ">{{ t('section_1.p1') }}
             </p>
-            <button class="btn btn-neutral tablet:btn-wide tablet:btn-lg w-full self-center my-5">ENTRE EM
-              CONTATO</button>
+            <button class="btn btn-neutral tablet:btn-wide tablet:btn-lg w-full self-center my-5 uppercase">{{
+              t('section_1.cta')
+            }}</button>
           </div>
         </div>
 
@@ -42,54 +38,54 @@
       <div class="flex flex-col md:flex-row gap-3">
 
         <div class="flex flex-col items-center gap-3 md:w-1/3 bg-info rounded-3xl p-5">
-          <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">Destaque-se no Online!</h1>
-          <p>Torne-se um profissional respeitado tendo sua própria marca na internet</p>
+          <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">{{ t('section_2.title') }}</h1>
+          <p>{{ t('section_2.p1') }}</p>
           <img class="w-fit" src="/img/website.png" />
         </div>
         <div class="place-self-end text-start md:w-2/3 flex flex-col gap-3 bg-warning rounded-3xl p-5">
-          <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold  ">Vantagens de se ter um site:</h1>
+          <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold  ">{{ t('section_3.title') }}</h1>
           <ul class="flex flex-col gap-3 tablet:ml-5">
             <li>
               <p>
-                <Icon name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">Credibilidade:</span> ter
-                uma
-                presença
-                online
-                fortalece sua
-                credibilidade e conquista a confiança de
-                seus clientes
+                <Icon class="mr-2" name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">{{
+                  t('section_3.list.1.span') }}</span> {{
+    t('section_3.list.1.p') }}
               </p>
             </li>
             <li>
               <p>
-                <Icon name="mdi:check-bold" color="yellow" size=" 30" />
-                <span class="font-bold">Identidade própria:</span> não se limite a
-                ferramentas
-                pagas ou redes sociais
+                <Icon class="mr-2" name="mdi:check-bold" color="yellow" size=" 30" />
+                <span class="font-bold">{{
+                  t('section_3.list.2.span') }}</span> {{
+    t('section_3.list.2.p') }}
               </p>
             </li>
             <li>
               <p>
-                <Icon name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">Clientes à vista:</span>
-                Redirecione clientes para
-                campanhas ou produtos
+                <Icon class="mr-2" name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">{{
+                  t('section_3.list.3.span') }}</span>
+                {{
+                  t('section_3.list.3.p') }}
               </p>
             </li>
             <li>
               <p>
-                <Icon name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">Acesso aos seus
-                  dados:</span> Google Analytics e Facebook Pixel
+                <Icon class="mr-2" name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">{{
+                  t('section_3.list.4.span') }}</span> {{
+    t('section_3.list.4.p') }}
               </p>
             </li>
             <li>
               <p>
-                <Icon name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">Automatizão de
-                  tarefas:</span> automatize tarefas repetitivas e manuais, como planilhas e pastas
+                <Icon class="mr-2" name="mdi:check-bold" color="yellow" size=" 30" /><span class="font-bold">{{
+                  t('section_3.list.5.span') }}</span> {{
+    t('section_3.list.5.p') }}
               </p>
             </li>
             <li>
               <p class="font-bold">
-                <Icon name="mdi:check-bold" color="yellow" size=" 30" />VENDA MUITO MAIS
+                <Icon class="mr-2" name="mdi:check-bold" color="yellow" size=" 30" />{{
+                  t('section_3.list.6.span') }}
               </p>
             </li>
           </ul>
@@ -100,75 +96,60 @@
     <div class="divider" />
 
     <section>
-      <div class="bg-success rounded-3xl p-5">
-        <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">Serviços</h1>
+      <div class="bg-success rounded-3xl p-5 tablet:px-10">
+        <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">{{ t('services.title') }}</h1>
 
         <div class="flex flex-col md:flex-row gap-3 mt-[15px] justify-between">
           <div>
-            <p class="text-xl tablet:text-2xl font-bold">Sites:</p>
+            <p class="text-xl tablet:text-2xl font-bold">{{ t('services.website') }}</p>
             <ul class=" list-disc pl-5">
-              <li>Sites Institucionais</li>
-              <li>Landing page</li>
-              <li>Páginas de Captura</li>
-              <li>Páginas de Obrigado</li>
-              <li>Páginas de Formulário</li>
-              <li>Blog</li>
-              <li>SEO</li>
-              <li>Tráfego Pago/Campanhas</li>
-              <li>Analytics e Pixel</li>
+              <li v-for="service in tm('services.websites_list')">{{ rt(service.p) }}</li>
             </ul>
           </div>
           <div>
-            <p class="text-xl tablet:text-2xl font-bold">Sistemas:</p>
+            <p class="text-xl tablet:text-2xl font-bold">{{ t('services.system') }}</p>
             <ul class=" list-disc pl-5">
-              <li>Ecommerces</li>
-              <li>Aplicativos Web</li>
-              <li>Aplicativos Mobile</li>
-              <li>Aplicativos Desktop</li>
-              <li>Painéis e Dashboards</li>
-              <li>Criação de Servidores</li>
-              <li>Banco de Dados</li>
+              <li v-for="service in tm('services.systems_list')">{{ rt(service.p) }}</li>
             </ul>
           </div>
           <div>
-            <p class="text-xl tablet:text-2xl font-bold">Automatização:</p>
-            <ul class=" list-disc pl-5">
-              <li>Extração e scrape de dados</li>
-              <li>Bots de postagem do Telegram/Whatsapp</li>
-              <li>Automatização de Planilhas</li>
+            <p class="text-xl tablet:text-2xl font-bold">{{ t('services.automation') }}</p>
+            <ul class="list-disc pl-5">
+              <li v-for="service in tm('services.automation_list')">{{ rt(service.p) }}</li>
             </ul>
           </div>
         </div>
-        <p class="text-2xl font-bold text-end">e muito mais...</p>
+        <p class="text-2xl font-bold text-end">{{ t('services.more') }}</p>
 
       </div>
     </section>
 
     <section>
       <div class="p-5">
-        <h1 class="text-2xl tablet:text-3xl md:text-4xl  font-extrabold">Portfólio</h1>
-        <p>Alguns dos meus trabalhos:</p>
+        <h1 class="text-2xl tablet:text-3xl md:text-4xl  font-extrabold">{{ t('portfolio.title') }}</h1>
+        <p>{{ t('portfolio.p') }}</p>
 
         <div class="flex flex-col md:flex-row justify-between gap-3 mt-[15px]">
           <div class="w-full">
-            <p class="text-xl font-bold text-center my-4">Página de Captura</p>
+            <p class="text-xl font-bold text-center my-4">{{ t('portfolio.list.1.title') }}</p>
             <div class="flex justify-center mb-4">
               <NuxtLink to="https://port folio-landing-page-pedro-sobral.vercel.app/" target="_blank">
-                <img class="rounded-xl" src="/img/portfolio-1-pedro-sobral.webp" alt="Página de Captura">
+                <img class="rounded-xl" src="/img/portfolio-1-pedro-sobral.webp" :alt="t('portfolio.list.1.title')">
               </NuxtLink>
             </div>
 
             <p class="text-center font-medium">
               <NuxtLink class="link link-hover" to="https://port folio-landing-page-pedro-sobral.vercel.app"
-                target="_blank">Demonstração ao Vivo</NuxtLink>
+                target="_blank">{{ t('portfolio.list.1.demo') }}</NuxtLink>
             </p>
             <p class="text-center font-medium">
-              <NuxtLink class="link link-hover" to="/portfolio/lp-pedro-sobral" target="_self">Sobre o Projeto</NuxtLink>
+              <NuxtLink class="link link-hover" to="/portfolio/lp-pedro-sobral" target="_self">{{
+                t('portfolio.list.1.about') }}</NuxtLink>
             </p>
           </div>
 
           <div class="w-full">
-            <p class="text-xl font-bold text-center my-4">Projeto Pessoal</p>
+            <p class="text-xl font-bold text-center my-4">{{ t('portfolio.list.2.title') }}</p>
             <div class="flex justify-center mb-4">
               <NuxtLink to="https://www.melhores-compras.online" target="_blank">
                 <img class="rounded-xl" src="/img/portfolio-2-mco.webp" alt="Projeto Pessoal">
@@ -176,18 +157,19 @@
             </div>
 
             <p class="text-center font-medium">
-              <NuxtLink class="link link-hover" to="https://www.melhores-compras.online" target=" _blank">Demonstração ao
-                Vivo</NuxtLink>
+              <NuxtLink class="link link-hover" to="https://www.melhores-compras.online" target=" _blank">{{
+                t('portfolio.list.2.demo') }}</NuxtLink>
             </p>
             <p class="text-center font-medium">
-              <NuxtLink class="link link-hover" to="/portfolio/melhores-compras-online" target="_self">Sobre o Projeto
+              <NuxtLink class="link link-hover" to="/portfolio/melhores-compras-online" target="_self">{{
+                t('portfolio.list.2.about') }}
               </NuxtLink>
             </p>
           </div>
 
 
           <div class="w-full">
-            <p class="text-xl font-bold text-center my-4">Buscador de Filmes</p>
+            <p class="text-xl font-bold text-center my-4">{{ t('portfolio.list.3.title') }}</p>
             <div class="flex justify-center mb-4">
               <NuxtLink to="https://nuxt-movie-website.vercel.app/" target="_blank">
                 <img class="rounded-xl" src="/img/portfolio-3-movies.webp" alt="Nuxt Movies App">
@@ -195,12 +177,11 @@
             </div>
 
             <p class="text-center font-medium">
-              <NuxtLink class="link link-hover" to="https://nuxt-movie-website.vercel.app/" target=" _blank">Demonstração
-                ao
-                Vivo</NuxtLink>
+              <NuxtLink class="link link-hover" to="https://nuxt-movie-website.vercel.app/" target=" _blank">{{
+                t('portfolio.list.3.demo') }}</NuxtLink>
             </p>
             <p class="text-center font-medium">
-              <NuxtLink class="link link-hover" to="/portfolio/movie-app" target="_self">Sobre o Projeto
+              <NuxtLink class="link link-hover" to="/portfolio/movie-app" target="_self">{{ t('portfolio.list.3.about') }}
               </NuxtLink>
             </p>
           </div>
@@ -216,47 +197,263 @@
 {
   "pt-BR": {
     "page_title": "testes PTBRRRRRRRRR",
-    "section_home": {
-      "title": {
-        "t1": "Transforme",
-        "t2": "Ideias em",
-        "t3": "Realidade"
-      },
-      "description": {
-        "p1": "Criamos Aplicativos Mobile, Web e Servidores Sob Medida",
-        "p2": "Potencialize sua Presença Online com SEO de Alto Desempenho",
-        "p3": "Vamos criar algo incrível juntos!"
-      },
-      "btns": {
-        "portfolio": "Portfólio",
-        "contact": "Contato"
-      },
-      "gif_alt": "Hero gif animado",
-      "seo": {
-        "metadescription": "Minha pagina de freelancer"
+    "section_1": {
+      "title": "Desenvolvedor Full Stack",
+      "p1": "Um entusiasta Full Stack em constante evolução. Deixe-me guiá-lo por minha jornada no mundo do desenvolvimento, destacando minhas habilidades, projetos e experiências. Vamos construir algo incrível juntos!",
+      "cta": "Entre em contato"
+    },
+    "section_2": {
+      "title": "Destaque-se no Online!",
+      "p1": "Torne-se um profissional respeitado tendo sua própria marca na internet"
+    },
+    "section_3": {
+      "title": "Vantagens de se ter um site:",
+      "list": {
+        "1": {
+          "span": "Credibilidade:",
+          "p": "ter uma presença online fortalece sua credibilidade e conquista a confiança de seus clientes"
+        },
+        "2": {
+          "span": "Identidade própria:",
+          "p": "não se limite ao formato das redes sociais"
+        },
+        "3": {
+          "span": "Clientes à vista:",
+          "p": "Redirecione clientes para campanhas ou produtos"
+        },
+        "4": {
+          "span": "Acesso aos seus dados:",
+          "p": "Google Analytics e Facebook Pixel"
+        },
+        "5": {
+          "span": "Automatizão de tarefas:",
+          "p": "automatize tarefas repetitivas e manuais, como planilhas e pastas"
+        },
+        "6": {
+          "span": "VENDA MUITO MAIS!"
+        }
+      }
+    },
+    "services": {
+      "title": "Serviços",
+      "website": "Sites",
+      "system": "Sistemas",
+      "automation": "Automatização",
+      "websites_list": [
+        {
+          "p": "Sites Institucionais"
+        },
+        {
+          "p": "Landing page"
+        },
+        {
+          "p": "Páginas de Captura"
+        },
+        {
+          "p": "Páginas de Obrigado"
+        },
+        {
+          "p": "Páginas de Formulário"
+        },
+        {
+          "p": "Blog"
+        },
+        {
+          "p": "SEO"
+        },
+        {
+          "p": "Tráfego Pago/Campanhas"
+        },
+        {
+          "p": "Analytics e Pixel"
+        }
+      ],
+      "systems_list": [
+        {
+          "p": "Ecommerces"
+        },
+        {
+          "p": "Aplicativos Web"
+        },
+        {
+          "p": "Aplicativos Mobile"
+        },
+        {
+          "p": "Aplicativos Desktop"
+        },
+        {
+          "p": "Painéis e Dashboards"
+        },
+        {
+          "p": "Criação de Servidores"
+        },
+        {
+          "p": "Banco de Dados"
+        }
+      ],
+      "automation_list": [
+        {
+          "p": "Extração e scrape de dados"
+        },
+        {
+          "p": "Bots de postagem do Telegram/Whatsapp"
+        },
+        {
+          "p": "Automatização de Planilhase"
+        }
+      ],
+      "more": "e muito mais..."
+    },
+    "portfolio": {
+      "title": "Portfólio",
+      "p": "Alguns dos meus trabalhos:",
+      "list": {
+        "1": {
+          "title": "Página de Captura",
+          "demo": "Demonstração ao vivo",
+          "about": "Sobre o Projeto"
+        },
+        "2": {
+          "title": "Projeto Pessoal",
+          "demo": "Demonstração ao vivo",
+          "about": "Sobre o Projeto"
+        },
+        "3": {
+          "title": "Buscador de Filmes",
+          "demo": "Demonstração ao vivo",
+          "about": "Sobre o Projeto"
+        }
       }
     }
   },
   "en-US": {
     "page_title": "testes USSSSSSSSSS",
-    "section_home": {
-      "title": {
-        "t1": "Transform",
-        "t2": "Ideas into",
-        "t3": "Reality"
-      },
-      "description": {
-        "p1": "We create Mobile Application, Websites and Server on Demand",
-        "p2": "Boost your Online Presence with High Performance SEO",
-        "p3": "Let's create something amazing together!"
-      },
-      "btns": {
-        "portfolio": "Portfolio",
-        "contact": "Contact"
-      },
-      "gif_alt": "Animated hero gif",
-      "seo": {
-        "metadescription": "My freelancer page"
+    "section_1": {
+      "title": "Full Stack Developer",
+      "p1": "A Full Stack enthusiast in constant evolution. Let me guide you through my journey at the world of development, highlighting my skills, projects and experiences. Let's build something amazing together!",
+      "cta": "Contact me"
+    },
+    "section_2": {
+      "title": "Stand out Online!",
+      "p1": "Become a respected professional by having your own brand on the internet"
+    },
+    "section_3": {
+      "title": "Advantages of having a website:",
+      "list": {
+        "1": {
+          "span": "Credibility:",
+          "p": "having an online presence strengthens your credibility and gains the trust of your customers"
+        },
+        "two": {
+          "span": "Self-identity:",
+          "p": "don't limit yourself to paid tools or social networks"
+        },
+        "3": {
+          "span": "Sight customers:",
+          "p": "Redirect customers to campaigns or products"
+        },
+        "4": {
+          "span": "Access to your data:",
+          "p": "Google Analytics and Facebook Pixel"
+        },
+        "5": {
+          "span": "Task automation:",
+          "p": "automate repetitive, manual tasks like spreadsheets and folders"
+        },
+        "6": {
+          "span": "SELL MUCH MORE!"
+        }
+      }
+    },
+    "services": {
+      "title": "Services",
+      "website": "Websites",
+      "system": "Systems",
+      "automation": "Automation",
+      "websites_list": [
+        {
+          "p": "Institutional Sites"
+        },
+        {
+          "p": "Landing page"
+        },
+        {
+          "p": "Capture Pages"
+        },
+        {
+          "p": "Thank You Pages"
+        },
+        {
+          "p": "Form Pages"
+        },
+        {
+          "p": "Blog"
+        },
+        {
+          "p": "SEO"
+        },
+        {
+          "p": "Paid Traffic/Campaigns"
+        },
+        {
+          "p": "Analytics and Pixel"
+        }
+      ],
+      "systems_list": [
+        {
+          "p": "Ecommerces"
+        },
+        {
+          "p": "Web Applications"
+        },
+        {
+          "p": "Mobile Applications"
+        },
+        {
+          "p": "Desktop Applications"
+        },
+        {
+          "p": "Panels and Dashboards"
+        },
+        {
+          "p": "Server Creation"
+        },
+        {
+          "p": "Database"
+        }
+      ],
+      "automation_list": [
+        {
+          "p": "Data extraction and scraping"
+        },
+        {
+          "p": "Telegram/Whatsapp Post Bots"
+        },
+        {
+          "p": "Spreadsheet Automation"
+        }
+      ],
+      "more": "and much more..."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "p": "Some of my work:",
+      "list": {
+        "1": {
+          "title": "Capture Page",
+          "demo": "Live demo",
+          "about": "About the Project"
+        },
+        "2": {
+          "title": "Personal Project",
+          "demo": "Live demo",
+          "about": "About the Project"
+        },
+        "3": {
+          "title": "Movie Search",
+          "demo": "Live demo",
+          "about": "About the Project"
+        }
       }
     }
   }

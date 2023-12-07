@@ -93,7 +93,7 @@ onMounted(() => {
   },
   "en-US": {
     "page_title": "Rafael Alves - Software Developer",
-    "meta_description": "Creation of Websites, SEO, Mobile Applications, E-commerce and Backend Servers. Turn your idea into reality!"
+    "meta_description": "Website Creator, SEO, Mobile Applications, E-commerce and Backend Servers. Turn your idea into reality!"
   }
 }
 </i18n>
