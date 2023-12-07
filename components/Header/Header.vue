@@ -32,7 +32,7 @@
 
         </div>
 
-        <button class="btn btn-neutral btn-sm">ENTRE EM CONTATO</button>
+
 
       </div>
     </nav>

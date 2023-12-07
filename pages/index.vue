@@ -21,6 +21,8 @@
               desenvolvimento, destacando minhas habilidades, projetos e experiências. Vamos construir algo incrível
               juntos!
             </p>
+            <button class="btn btn-neutral tablet:btn-wide tablet:btn-lg w-full self-center my-5">ENTRE EM
+              CONTATO</button>
           </div>
         </div>
 
@@ -143,11 +145,11 @@
     </section>
 
     <section>
-      <div>
+      <div class="p-5">
         <h1 class="text-2xl tablet:text-3xl md:text-4xl  font-extrabold">Portfólio</h1>
         <p>Alguns dos meus trabalhos:</p>
         <div class="flex flex-col md:flex-row justify-between gap-3 mt-[15px]">
-          <div class="border rounded-md w-full">
+          <div class="w-full">
             <p class="text-xl font-bold text-center my-4">Página de Captura</p>
             <div class="flex justify-center mb-4">
               <NuxtLink to="https://port folio-landing-page-pedro-sobral.vercel.app/" target="_blank">
@@ -155,7 +157,7 @@
               </NuxtLink>
             </div>
           </div>
-          <div class="border rounded-md w-full">
+          <div class="w-full">
             <p class="text-xl font-bold text-center my-4">Projeto Pessoal</p>
             <div class="flex justify-center mb-4">
               <NuxtLink to="https://www.melhores-compras.online" target="_blank">
@@ -163,7 +165,7 @@
               </NuxtLink>
             </div>
           </div>
-          <div class="border rounded-md w-full">
+          <div class="w-full">
             <p class="text-xl font-bold text-center my-4">Buscador de Filmes</p>
             <div class="flex justify-center mb-4">
               <NuxtLink to="https://nuxt-movie-website.vercel.app/" target="_blank">
