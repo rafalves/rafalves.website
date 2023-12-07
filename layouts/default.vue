@@ -1,48 +1,20 @@
-<template>
-  <Html :lang="htmlAttrs.lang" class="scroll-smooth bg-[#f7eff5]">
-  <div class="flex flex-col h-full antialiased ">
-    <header>
-      <Header />
-    </header>
-
-    <div class="flex-1">
-
-      <!-- create aside menus later  -->
-      <!-- <aside class="flex-1" /> -->
-
-      <!-- <div class="h-full p-5 bg-slate-300 mx-auto max-w-[58rem]">
-      </div> -->
-      <div>
-
-        <slot />
-      </div>
-
-      <!-- <aside class="flex-1" /> -->
-    </div>
-
-    <footer class="bg-slate-300">
-      <Footer />
-    </footer>
-  </div>
-
-  </Html>
-</template>
-
 <script setup lang="ts">
+const colorMode = useColorMode()
+
 const { t } = useI18n({
-  useScope: 'local'
+  useScope: 'local',
 })
 
 // locale Lang SEO
 const head = useLocaleHead({
-  addSeoAttributes: true
+  addSeoAttributes: true,
 })
 const htmlAttrs = computed(() => head.value.htmlAttrs!)
 
 // Default SEO
 useSeoMeta({
   title: t('page_title'),
-  description: t('meta_description')
+  description: t('meta_description'),
 })
 
 // This script is a workaround for the issue fast route change
@@ -55,10 +27,10 @@ onMounted(() => {
         const messages = [
           `Uncaught NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.`, // Chromium
           `NotFoundError: Node.insertBefore: Child to insert before is not a child of this node`, // Firefox
-          `NotFoundError: The object can not be found here.` // Safari
+          `NotFoundError: The object can not be found here.`, // Safari
         ]
 
-        if (messages.some((message) => ev.message.includes(message))) {
+        if (messages.some(message => ev.message.includes(message))) {
           console.warn('Reloading due to error: https://github.com/nuxt/nuxt/issues/13350')
           ev.preventDefault()
           window.location.reload()
@@ -68,6 +40,37 @@ onMounted(() => {
   }
 })
 </script>
+
+<template>
+  <Html :data-theme="colorMode.value" :lang="htmlAttrs.lang" class="scroll-smooth font-poppins">
+  <div>
+    <div class="flex flex-col h-full antialiased max-w-[1140px] mx-auto">
+
+      <header class="mt-5">
+        <Header />
+      </header>
+
+      <div class="flex-1">
+        <!-- create aside menus later  -->
+        <!-- <aside class="flex-1" /> -->
+
+        <!-- <div class="h-full p-5 bg-slate-300 mx-auto max-w-[58rem]">
+      </div> -->
+        <div>
+          <slot />
+        </div>
+
+        <!-- <aside class="flex-1" /> -->
+      </div>
+    </div>
+
+    <div class="bg-base-300">
+      <Footer />
+    </div>
+  </div>
+
+  </Html>
+</template>
 
 <style>
 .page-enter-active,
@@ -94,5 +97,3 @@ onMounted(() => {
   }
 }
 </i18n>
-
-

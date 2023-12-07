@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  .clip-polygon-h-10 {
-    clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
-  }
-  .clip-polygon-none {
-    clip-path: none;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap');
 
 html, body, #__nuxt {
   height: 100%;
@@ -23,23 +12,24 @@ html, body, #__nuxt {
 }
 
 ::-webkit-scrollbar-corner {
-  background: hsl(305, 100%, 90%);
+  background: hsl(215, 28%, 90%);
 }
 ::-webkit-scrollbar-track {
-  background: hsl(305, 100%, 90%);
+  background: hsl(215, 28%, 90%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(305, 100%, 80%);
+  background: hsl(216, 28%, 28%);
   border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(305, 80%, 70%);
+  background: hsl(215, 28%, 50%);
 }
 
-@supports (scrollbar-color: hsl(305, 100%, 80%) hsl(305, 100%, 90%)) {
+@supports (scrollbar-color: hsl(215, 28%, 80%) hsl(215, 28%, 90%)) {
   * {
-    scrollbar-color: hsl(305, 100%, 80%) hsl(305, 100%, 90%);
+    scrollbar-color: hsl(215, 28%, 80%) hsl(215, 28%, 90%);
     scrollbar-width: thin;
   }
 }
+
