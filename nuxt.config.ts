@@ -2,7 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', 'nuxt-icon', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', 'nuxt-icon',
+    // '@nuxtjs/color-mode'
+  ],
   i18n: {
     /* module options */
     detectBrowserLanguage: {
@@ -39,4 +41,9 @@ export default defineNuxtConfig({
       scrollBehaviorType: 'smooth',
     },
   },
+  // colorMode: {
+  //   preference: 'system', // default theme
+  //   dataValue: 'theme', // activate data-theme in <html> tag
+  //   classSuffix: '',
+  // },
 })

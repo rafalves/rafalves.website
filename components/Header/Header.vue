@@ -33,7 +33,7 @@
 
           <SlicesLangSwitcher />
 
-          <SlicesColorSwitch />
+          <!-- <SlicesColorSwitch /> -->
 
         </div>
 

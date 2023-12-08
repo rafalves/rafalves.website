@@ -1,6 +1,36 @@
-<script setup lang="ts">
-const colorMode = useColorMode()
+<template>
+  <Html data-theme="light" :lang="htmlAttrs.lang" class="scroll-smooth font-poppins">
+  <div>
+    <div class="flex flex-col h-full antialiased max-w-[1140px] mx-auto">
 
+      <header class="mt-5">
+        <Header />
+      </header>
+
+      <div class="flex-1">
+        <!-- create aside menus later  -->
+        <!-- <aside class="flex-1" /> -->
+
+        <!-- <div class="h-full p-5 bg-slate-300 mx-auto max-w-[58rem]">
+      </div> -->
+        <div>
+          <slot />
+        </div>
+
+        <!-- <aside class="flex-1" /> -->
+      </div>
+    </div>
+
+    <div class="bg-base-300">
+      <Footer />
+    </div>
+  </div>
+
+  </Html>
+</template>
+
+
+<script setup lang="ts">
 const { t } = useI18n({
   useScope: 'local',
 })
@@ -41,36 +71,7 @@ onMounted(() => {
 })
 </script>
 
-<template>
-  <Html :data-theme="colorMode.value" :lang="htmlAttrs.lang" class="scroll-smooth font-poppins">
-  <div>
-    <div class="flex flex-col h-full antialiased max-w-[1140px] mx-auto">
 
-      <header class="mt-5">
-        <Header />
-      </header>
-
-      <div class="flex-1">
-        <!-- create aside menus later  -->
-        <!-- <aside class="flex-1" /> -->
-
-        <!-- <div class="h-full p-5 bg-slate-300 mx-auto max-w-[58rem]">
-      </div> -->
-        <div>
-          <slot />
-        </div>
-
-        <!-- <aside class="flex-1" /> -->
-      </div>
-    </div>
-
-    <div class="bg-base-300">
-      <Footer />
-    </div>
-  </div>
-
-  </Html>
-</template>
 
 <style>
 .page-enter-active,
@@ -97,3 +98,4 @@ onMounted(() => {
   }
 }
 </i18n>
+

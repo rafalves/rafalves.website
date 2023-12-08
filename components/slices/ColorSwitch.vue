@@ -1,41 +1,44 @@
 <template>
   <div class="flex gap-1">
 
-    <Icon name="ic:round-light-mode" size="30" color="yellow" @click="colorMode.value = 'light'" :class="isLightTheme" />
-    <Icon name="material-symbols:dark-mode" size="30" color="blue" @click="colorMode.value = 'dark'"
-      :class="isDarkTheme" />
+    <div>
+      <Icon v-show="isLightTheme" name="ic:round-light-mode" size="30" color="yellow"
+        @click="colorMode.preference = 'light'" />
+      <Icon v-show="!isLightTheme" name="ic:round-light-mode" size="30" color="blue" class=""
+        @click="colorMode.preference = 'light'" />
+    </div>
+    <div>
+      <Icon name="material-symbols:dark-mode" size="30" color="blue" @click="colorMode.preference = 'dark'"
+        :class="isDarkTheme" />
+    </div>
     <Icon name="streamline-emojis:game-dice" size="30" class="cursor-pointer" @click="randomColor"
       :class="isRandomTheme" />
-    <!-- <p class="w-[90px] italic">{{ colorMode.value }}</p> -->
 
   </div>
 </template>
 
 <script setup lang="ts">
-// import colorThemes from '/utils/colorThemes'
-
-
 const colorMode = useColorMode()
 
 function randomColor() {
   const themeIndex = Math.floor(Math.random() * colorThemes.length)
-  colorMode.value = colorThemes[themeIndex]
+  colorMode.preference = colorThemes[themeIndex]
 }
 
-const isRandomTheme = computed(() => {
-  return colorThemes.includes(colorMode.value) ? 'animate-spin' : 'animate-none saturate-0'
-})
-const isLightTheme = computed(() => colorMode.value === 'light' ? '' : 'saturate-0')
+const isRandomTheme = ref('saturate-50')
 
-const isDarkTheme = computed(() => colorMode.value === 'dark' ? '' : 'saturate-0 opacity-75')
+const isLightTheme = ref()
+// const isLightTheme = computed(() => colorMode.preference === 'light')
+const isDarkTheme = computed(() => colorMode.preference === 'dark')
 
+onMounted(() => {
+  isLightTheme.value = colorMode.preference === 'light' ? true : false
 
-
+});
 
 watchEffect(() => {
-  if (colorThemes.includes(colorMode.value)) {
-  }
+  console.log('light: ' + isLightTheme.value)
+  console.log('dark: ' + isDarkTheme.value)
+  console.log('colorMode: ' + colorMode.preference)
 })
-
-
 </script>

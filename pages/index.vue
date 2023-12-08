@@ -139,7 +139,7 @@ const localePath = useLocalePath()
             </div>
 
             <p class="text-center font-medium">
-              <NuxtLink class="link link-hover" to="https://port folio-landing-page-pedro-sobral.vercel.app"
+              <NuxtLink class="link link-hover" to="https://portfolio-landing-page-pedro-sobral.vercel.app"
                 target="_blank">{{ t('portfolio.list.1.demo') }}</NuxtLink>
             </p>
             <p class="text-center font-medium">
