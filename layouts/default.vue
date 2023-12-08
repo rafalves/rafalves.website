@@ -8,16 +8,9 @@
       </header>
 
       <div class="flex-1">
-        <!-- create aside menus later  -->
-        <!-- <aside class="flex-1" /> -->
-
-        <!-- <div class="h-full p-5 bg-slate-300 mx-auto max-w-[58rem]">
-      </div> -->
         <div>
           <slot />
         </div>
-
-        <!-- <aside class="flex-1" /> -->
       </div>
     </div>
 

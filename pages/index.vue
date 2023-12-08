@@ -344,7 +344,7 @@ const localePath = useLocalePath()
           "span": "Credibility:",
           "p": "having an online presence strengthens your credibility and gains the trust of your customers"
         },
-        "two": {
+        "2": {
           "span": "Self-identity:",
           "p": "don't limit yourself to paid tools or social networks"
         },

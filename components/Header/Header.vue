@@ -1,8 +1,7 @@
-
 <template>
   <div>
     <nav class="flex justify-between mx-5 gap-3">
-      <NuxtLink to="/">
+      <NuxtLink :to="localePath('/')">
         <span class="text-2xl font-museoModerno font-bold">
           rafalves.website
         </span>
@@ -12,6 +11,8 @@
 
       <div class="hidden md:flex gap-3">
         <div class="flex gap-3 pt-1">
+
+
 
           <ul class="flex gap-3">
             <li class="italic hover:underline">
@@ -33,11 +34,18 @@
 
           <SlicesLangSwitcher />
 
-          <!-- <SlicesColorSwitch /> -->
+          <nav>
+            <div class="grid grid-flow-col gap-3">
+              <NuxtLink to="https://www.linkedin.com/in/rafael-alves-costa/" target="_blank">
+                <Icon name="devicon:linkedin" size="20" />
+              </NuxtLink>
+              <NuxtLink to="https://github.com/rafalves" target="_blank">
+                <Icon name="bi:github" size="20" />
+              </NuxtLink>
+            </div>
+          </nav>
 
         </div>
-
-
 
       </div>
     </nav>

@@ -9,10 +9,10 @@
       </nav>
       <nav>
         <div class="grid grid-flow-col gap-4">
-          <NuxtLink to="https://github.com/rafalves" target="_blank">
+          <NuxtLink to="https://www.linkedin.com/in/rafael-alves-costa/" target="_blank">
             <Icon name="devicon:linkedin" size="25" />
           </NuxtLink>
-          <NuxtLink to="https://www.linkedin.com/in/rafael-alves-costa/" target="_blank">
+          <NuxtLink to="https://github.com/rafalves" target="_blank">
             <Icon name="bi:github" size="25" />
           </NuxtLink>
         </div>
