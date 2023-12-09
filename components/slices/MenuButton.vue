@@ -16,26 +16,28 @@
       <aside v-if="isOpen"
         class="fixed top-0 left-0 w-3/5 h-screen bg-neutral-content z-50 text-neutral flex flex-col justify-between">
 
-        <nav class="flex flex-col gap-5 menu mt-10">
+        <div class="flex flex-col gap-5 menu mt-10">
 
           <div class="flex gap-10 justify-center">
             <SlicesLangSwitcher />
-            <SlicesColorSwitch />
+            <!-- <SlicesColorSwitch /> -->
           </div>
 
           <p class="text-center text-xl font-extrabold opacity-80">{{ t('links') }}</p>
-          <ul>
-            <li>
-              <NuxtLink :to="localePath('/about')" class="link link-hover">{{ t('about') }}</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink :to="localePath('/portfolio')" class="link link-hover">{{ t('portfolio') }}</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink :to="localePath('/contact')" class="link link-hover">{{ t('contact') }}</NuxtLink>
-            </li>
-          </ul>
-        </nav>
+          <nav class="flex justify-center">
+            <ul>
+              <li>
+                <NuxtLink :to="localePath('/about')" class="link link-hover">{{ t('about') }}</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink :to="localePath('/portfolio')" class="link link-hover">{{ t('portfolio') }}</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink :to="localePath('/contact')" class="link link-hover">{{ t('contact') }}</NuxtLink>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
         <footer class="footer footer-center text-base-content rounded mb-10">
           <nav>
