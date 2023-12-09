@@ -1,7 +1,51 @@
 <template>
   <div class="flex flex-col mt-5 tablet:mt-10 gap-3 mx-5">
-    <p class="font-bold uppercase">{{ t('title.p1') }}</p>
-    <h1 class="text-2xl tablet:text-4xl font-extrabold uppercase -mt-3">{{ t('title.p2') }}</h1>
+
+
+
+    <div>
+      <p class="font-bold uppercase">{{ t('title.p1') }}</p>
+      <h1 class="text-2xl tablet:text-4xl font-extrabold uppercase">{{ t('title.p2') }}</h1>
+    </div>
+
+    <div class="flex flex-col tablet:flex-row justify-between gap-5">
+      <div class="mt-3">
+        <p><span class="font-medium">{{ t('info.addressT') }}</span> {{ t('info.addressP') }}</p>
+        <span class="font-medium">{{ t('info.websiteT') }} </span>
+        <NuxtLink to="https://www.rafalves.website" target="_blank">
+          <p class="link link-hover inline italic text-blue-800">{{ t('info.websiteP') }}</p>
+        </NuxtLink>
+        <p><span class="font-medium">{{ t('info.emailT') }}</span> {{ t('info.emailP', { at: '@' }) }}</p>
+        <span class="font-medium">{{ t('info.linkedinT') }}</span>
+        <NuxtLink to="https://www.linkedin.com/in/rafael-alves-costa" target="_blank">
+          <p class="link link-hover inline italic text-blue-800">{{ t('info.linkedinP') }}</p>
+        </NuxtLink>
+        <br> <span class="font-medium">{{ t('info.githubT') }}</span>
+        <NuxtLink to="https://www.github.com/rafalves" target="_blank">
+          <p class="link link-hover inline italic text-blue-800">{{ t('info.githubP') }}</p>
+        </NuxtLink>
+      </div>
+      <div class="flex justify-center gap-5">
+        <div class="flex flex-col  items-center">
+          <div>
+            <Icon name="vscode-icons:file-type-word2" size="60" color="blue" />
+          </div>
+          <p class="text-xs mt-2">
+            <NuxtLink class="link text-blue-800" to="#">pt-br</NuxtLink> | <NuxtLink class="link text-blue-800" to="#">en
+            </NuxtLink>
+          </p>
+        </div>
+        <div class="flex flex-col  items-center">
+          <div>
+            <Icon name="vscode-icons:file-type-pdf2" size="60" color="red" />
+          </div>
+          <p class="text-xs mt-2">
+            <NuxtLink class="link text-blue-800" to="#">pt-br</NuxtLink> | <NuxtLink class="link text-blue-800" to="#">en
+            </NuxtLink>
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div class="divider" />
     <h2 class="text-2xl tablet:text-3xl font-bold">{{ t('profile.p1') }}</h2>
@@ -40,13 +84,13 @@
     <p>{{ t('language.p2') }}</p>
     <div class="divider" />
     <h2 class="text-2xl tablet:text-3xl font-bold">{{ t('work.title') }}</h2>
-    <p class="font-semibold italic mt-5">{{ t('work.xp1.title') }}</p>
+    <p class="font-semibold italic mt-5 underline">{{ t('work.xp1.title') }}</p>
     <p class="font-medium italic ml-5">{{ t('work.xp1.activities') }}</p>
     <ul>
       <li class="list-none ml-5"><span class="font-medium">{{ t('work.xp1.t1') }}</span>{{ t('work.xp1.p1') }}
       </li>
     </ul>
-    <p class="font-semibold italic mt-5">{{ t('work.xp2.title') }}</p>
+    <p class="font-semibold italic mt-5 underline">{{ t('work.xp2.title') }}</p>
 
     <p class="font-medium italic ml-5">{{ t('work.xp2.activities') }}</p>
     <ul>
@@ -57,7 +101,7 @@
       <li class="list-none ml-5"><span class="font-medium">{{ t('work.xp2.t3') }}</span>{{ t('work.xp2.p3') }}
       </li>
     </ul>
-    <p class="font-semibold italic mt-5">{{ t('work.xp3.title') }}</p>
+    <p class="font-semibold italic mt-5 underline">{{ t('work.xp3.title') }}</p>
     <p class="font-medium italic ml-5">{{ t('work.xp3.activities') }}</p>
     <ul>
       <li class="list-none ml-5"><span class="font-medium">{{ t('work.xp3.t1') }}</span>{{ t('work.xp3.p1') }}
@@ -88,6 +132,18 @@ const localePath = useLocalePath()
     "title": {
       "p1": "Oi, eu sou o Rafael",
       "p2": "Desenvolvedor de Software"
+    },
+    "info": {
+      "addressT": "Endereço:",
+      "addressP": "São Paulo/SP - Brasil",
+      "websiteT": "Site Pessoal: ",
+      "websiteP": "www.rafalves.website",
+      "emailT": "Email:",
+      "emailP": "rafalves.costa%{at}gmail.com",
+      "linkedinT": "LinkedIn: ",
+      "linkedinP": "www.linkedin.com/in/rafael-alves-costa",
+      "githubT": "GitHub: ",
+      "githubP": "www.github.com/rafalves"
     },
     "profile": {
       "p1": "Perfil",
@@ -201,6 +257,18 @@ const localePath = useLocalePath()
     "title": {
       "p1": "Hi, I'm Rafael",
       "p2": "Software developer"
+    },
+    "info": {
+      "addressT": "Address:",
+      "addressP": "São Paulo/SP - Brazil",
+      "websiteT": "Personal Website: ",
+      "websiteP": "www.rafalves.website",
+      "emailT": "Email:",
+      "emailP": "rafalves.costa%{at}gmail.com",
+      "linkedinT": "LinkedIn: ",
+      "linkedinP": "www.linkedin.com/in/rafael-alves-costa",
+      "githubT": "GitHub: ",
+      "githubP": "www.github.com/rafalves"
     },
     "profile": {
       "p1": "Profile",

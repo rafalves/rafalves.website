@@ -48,6 +48,9 @@
               <NuxtLink to="https://www.linkedin.com/in/rafael-alves-costa/" target="_blank">
                 <Icon name="bi:github" size="25" />
               </NuxtLink>
+              <NuxtLink to="https://wa.me/5511985470682" target="_blank">
+                <Icon name="logos:whatsapp-icon" size="30" />
+              </NuxtLink>
             </div>
           </nav>
           <aside>

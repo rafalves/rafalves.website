@@ -42,6 +42,9 @@
               <NuxtLink to="https://github.com/rafalves" target="_blank">
                 <Icon name="bi:github" size="20" />
               </NuxtLink>
+              <NuxtLink to="https://wa.me/5511985470682" target="_blank">
+                <Icon name="logos:whatsapp-icon" size="25" />
+              </NuxtLink>
             </div>
           </nav>
 
