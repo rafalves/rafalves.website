@@ -31,7 +31,9 @@
             <Icon name="vscode-icons:file-type-word2" size="60" color="blue" />
           </div>
           <p class="text-xs mt-2">
-            <NuxtLink class="link text-blue-800" to="#">pt-br</NuxtLink> | <NuxtLink class="link text-blue-800" to="#">en
+            <NuxtLink
+              to="https://docs.google.com/document/d/1wnvtgA8xS9_RtFqyzdkKIvRScZKy93k7DF-ppXHOp30/edit?usp=sharing"
+              class="link text-blue-800" target="_blank">pt-br</NuxtLink> | <NuxtLink class="link text-blue-800" to="#">en
             </NuxtLink>
           </p>
         </div>
