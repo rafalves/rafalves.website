@@ -1,11 +1,13 @@
 <template>
-  <Html data-theme="light" :lang="htmlAttrs.lang" class="scroll-smooth font-poppins">
+  <Html data-theme="light" :lang="htmlAttrs.lang" class="scroll-smooth font-poppins relative bg-page">
   <div>
-    <div class="flex flex-col h-full antialiased max-w-[1140px] mx-auto">
-
-      <header class="mt-5">
-        <Header />
-      </header>
+    <div class="flex flex-col h-full antialiased">
+      <!-- <div class="flex flex-col h-full antialiased max-w-[1140px] mx-auto"> -->
+      <div class="mb-5">
+        <header>
+          <Header />
+        </header>
+      </div>
 
       <div class="flex-1">
         <div>
@@ -76,6 +78,16 @@ onMounted(() => {
 .page-leave-to {
   opacity: 0;
   filter: blur(0.25rem);
+}
+
+.bg-page {
+  background-image: linear-gradient(300deg,
+      hsl(0deg 0% 100%) 0%,
+      hsl(229deg 40% 89%) 64%,
+      hsl(227deg 40% 78%) 100%);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 </style>
 

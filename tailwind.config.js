@@ -23,6 +23,7 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         museoModerno: ['MuseoModerno', 'sans-serif'],
+        "paytone-one": ["'Paytone One'", 'sans-serif'],
       },
     },
   },

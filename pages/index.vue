@@ -6,36 +6,35 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <div class="flex flex-col mt-5 tablet:mt-10 gap-3 mx-5 break-words">
+  <div class="flex flex-col mt-5 tablet:mt-10 gap-3 break-words">
 
     <section>
-      <div class="flex flex-col tablet:flex-row justify-between gap-3">
+      <div class="flex flex-col tablet:flex-col justify-between gap-3 mt-16 max-w-[1140px] mx-auto w-full">
 
-        <div class="bg-accent tablet:w-1/2 rounded-3xl pb-5">
-          <div class="flex flex-col gap-3 mt-[7%] mx-5">
-            <p class="text-2xl tablet:text-3xl md:text-4xl font-bold">{{ t('section_1.title') }}</p>
-            <p class="text-justify ">{{ t('section_1.p1') }}
-            </p>
-            <button class="btn btn-neutral tablet:btn-wide tablet:btn-lg w-full self-center my-5 uppercase">{{
-              t('section_1.cta')
-            }}</button>
-          </div>
+        <div>
+          <p class="text-lg tablet:text-2xl font-bold uppercase">{{ t('section_1.p1') }}</p>
+          <h1 class="text-4xl tablet:text-6xl md:text-8xl uppercase  font-paytone-one tablet:mt-5 text-center">{{
+            t('section_1.title') }}</h1>
         </div>
+        <p class="text-xl tablet:text-3xl text-center mt-8 font-light"> {{ t('section_1.p2') }}
+          <Icon name="noto:rocket" size="30" />
+        </p>
 
-        <div class="flex flex-col gap-3  items-center tablet:w-1/2">
-          <div class="avatar pt-[5%]">
-            <div class="w-56 bg-error  mask mask-squircle">
-              <img src="/img/rafael-profile.png" />
-            </div>
-          </div>
-          <h1 class="text-4xl font-extrabold">Rafael Alves</h1>
+        <div class="flex flex-col text-lg justify-center items-center gap-5 mt-5  font-light">
+          <p>{{ t('section_1.p3') }}
+          </p>
+          <NuxtLink to="https://wa.me/5511985470682" target="_blank">
+            <button class="wppBtn w-fit tablet:my-5 uppercase whitespace-nowrap"><span>Whatsapp
+                <Icon name="logos:whatsapp-icon" size="30" class="ml-2" />
+              </span></button>
+          </NuxtLink>
         </div>
-
       </div>
+      <div class="h-[200px]" />
     </section>
 
-    <section>
-      <div class="flex flex-col md:flex-row gap-3">
+    <section id=2>
+      <div class="flex flex-col md:flex-row gap-3 bg-red-100 max-w-[1140px] mx-auto w-full">
 
         <div class="flex flex-col items-center gap-3 md:w-1/3 bg-info rounded-3xl p-5">
           <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">{{ t('section_2.title') }}</h1>
@@ -96,7 +95,7 @@ const localePath = useLocalePath()
     <div class="divider" />
 
     <section>
-      <div class="bg-success rounded-3xl p-5 tablet:px-10">
+      <div class="bg-success rounded-3xl p-5 tablet:px-10 max-w-[1140px] mx-auto w-full">
         <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">{{ t('services.title') }}</h1>
 
         <div class="flex flex-col md:flex-row gap-3 mt-[15px] justify-between">
@@ -125,7 +124,7 @@ const localePath = useLocalePath()
     </section>
 
     <section>
-      <div class="p-5">
+      <div class="p-5 max-w-[1140px] mx-auto w-full">
         <h1 class="text-2xl tablet:text-3xl md:text-4xl  font-extrabold">{{ t('portfolio.title') }}</h1>
         <p>{{ t('portfolio.p') }}</p>
 
@@ -133,7 +132,8 @@ const localePath = useLocalePath()
           <div class="w-full">
             <p class="text-xl font-bold text-center my-4">{{ t('portfolio.list.1.title') }}</p>
             <div class="flex justify-center mb-4">
-              <NuxtLink to="https://port folio-landing-page-pedro-sobral.vercel.app/" target="_blank">
+              <NuxtLink class="link link-hover" to="https://portfolio-landing-page-pedro-sobral.vercel.app"
+                target="_blank">
                 <img class="rounded-xl" src="/img/portfolio-1-pedro-sobral.webp" :alt="t('portfolio.list.1.title')">
               </NuxtLink>
             </div>
@@ -198,8 +198,10 @@ const localePath = useLocalePath()
   "pt-BR": {
     "page_title": "testes PTBRRRRRRRRR",
     "section_1": {
-      "title": "Desenvolvedor Full Stack",
-      "p1": "Um entusiasta Full Stack em constante evolução. Deixe-me guiá-lo por minha jornada no mundo do desenvolvimento, destacando minhas habilidades, projetos e experiências. Vamos construir algo incrível juntos!",
+      "p1": "Oi, eu sou o Rafael",
+      "title": "Desenvolvedor de Software",
+      "p2": "Construo ferramentas WEB que vão fazer você faturar mais",
+      "p3": "Tem alguma ideia em mente? Vamos bater um papo sem compromisso, me chame no",
       "cta": "Entre em contato"
     },
     "section_2": {
@@ -329,9 +331,11 @@ const localePath = useLocalePath()
   "en-US": {
     "page_title": "testes USSSSSSSSSS",
     "section_1": {
-      "title": "Full Stack Developer",
-      "p1": "A Full Stack enthusiast in constant evolution. Let me guide you through my journey at the world of development, highlighting my skills, projects and experiences. Let's build something amazing together!",
-      "cta": "Contact me"
+      "p1": "Hi, I'm Rafael",
+      "title": "Software Developer",
+      "p2": "I build WEB tools that will make you earn more",
+      "p3": "Do you have any ideas in mind? Let's chat without obligation, call me on",
+      "cta": "Get in touch"
     },
     "section_2": {
       "title": "Stand out Online!",
@@ -460,3 +464,34 @@ const localePath = useLocalePath()
 }
 </i18n> 
  
+<style scoped>
+_section {
+  @apply max-w-[1140px] mx-auto w-full
+}
+
+.wppBtn {
+  background: linear-gradient(to right, #01ff66 0%, #02b148 50%, #4dfc93 100%);
+  background-size: 200% auto;
+  animation: gradient 5s ease infinite;
+  transition: transform 0.3s ease;
+  border: none;
+  border-radius: 9999px;
+  padding: 1rem 3rem;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>

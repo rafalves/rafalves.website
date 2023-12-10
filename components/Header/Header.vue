@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav class="flex justify-between mx-5 gap-3">
+  <div class="fixed w-full glass">
+    <div class="flex justify-between gap-3 py-5 max-w-[1140px] mx-auto w-full">
       <NuxtLink :to="localePath('/')">
         <span class="text-2xl font-museoModerno font-bold">
           rafalves.website
@@ -11,26 +11,25 @@
 
       <div class="hidden md:flex gap-3">
         <div class="flex gap-3 pt-1">
-
-
-
-          <ul class="flex gap-3">
-            <li class="italic hover:underline">
-              <NuxtLink :to="localePath('/about')">
-                {{ t('about') }}
-              </NuxtLink>
-            </li>
-            <li class="italic hover:underline">
-              <NuxtLink :to="localePath('/portfolio')">
-                {{ t('portfolio') }}
-              </NuxtLink>
-            </li>
-            <li class="italic hover:underline">
-              <NuxtLink :to="localePath('/contact')">
-                {{ t('contact') }}
-              </NuxtLink>
-            </li>
-          </ul>
+          <nav>
+            <ul class="flex gap-3">
+              <li class="italic hover:underline">
+                <NuxtLink :to="localePath('/about')">
+                  {{ t('about') }}
+                </NuxtLink>
+              </li>
+              <li class="italic hover:underline">
+                <NuxtLink :to="localePath('/portfolio')">
+                  {{ t('portfolio') }}
+                </NuxtLink>
+              </li>
+              <li class="italic hover:underline">
+                <NuxtLink :to="localePath('/contact')">
+                  {{ t('contact') }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </nav>
 
           <SlicesLangSwitcher />
 
@@ -51,7 +50,7 @@
         </div>
 
       </div>
-    </nav>
+    </div>
   </div>
 </template>
 
