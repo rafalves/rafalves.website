@@ -14,8 +14,9 @@
         <span class="font-medium">{{ t('info.websiteT') }} </span>
         <NuxtLink to="https://www.rafalves.website" target="_blank">
           <p class="link link-hover inline italic text-blue-800">{{ t('info.websiteP') }}</p>
-        </NuxtLink>
-        <p><span class="font-medium">{{ t('info.emailT') }}</span> {{ t('info.emailP', { at: '@' }) }}</p>
+        </NuxtLink><br>
+        <span class="font-medium">{{ t('info.emailT') }}</span>
+        <p class="link link-hover inline italic text-blue-800"> {{ t('info.emailP', { at: '@' }) }}</p><br>
         <span class="font-medium">{{ t('info.linkedinT') }}</span>
         <NuxtLink to="https://www.linkedin.com/in/rafael-alves-costa" target="_blank">
           <p class="link link-hover inline italic text-blue-800">{{ t('info.linkedinP') }}</p>
@@ -33,7 +34,9 @@
           <p class="text-xs mt-2">
             <NuxtLink
               to="https://docs.google.com/document/d/1wnvtgA8xS9_RtFqyzdkKIvRScZKy93k7DF-ppXHOp30/edit?usp=sharing"
-              class="link text-blue-800" target="_blank">pt-br</NuxtLink> | <NuxtLink class="link text-blue-800" to="#">en
+              class="link text-blue-800" target="_blank">pt-br</NuxtLink> | <NuxtLink
+              to="https://docs.google.com/document/d/1vYKGKGEP0PZH_qeNFRHty_RMZw92Nvf8VM5ezPCu7Uk/edit?usp=sharing"
+              target="_blank" class="link text-blue-800">en
             </NuxtLink>
           </p>
         </div>
@@ -42,7 +45,10 @@
             <Icon name="vscode-icons:file-type-pdf2" size="60" color="red" />
           </div>
           <p class="text-xs mt-2">
-            <NuxtLink class="link text-blue-800" to="#">pt-br</NuxtLink> | <NuxtLink class="link text-blue-800" to="#">en
+            <NuxtLink to="https://drive.google.com/file/d/1R3L614Rrez5BjBMDjghknQCMnxe3LXqi/view?usp=sharing"
+              target="_blank" class="link text-blue-800">pt-br</NuxtLink> | <NuxtLink
+              to="https://drive.google.com/file/d/1IuhYjj5YpB_1nKXDA9SdBx_2kMnirGqY/view?usp=sharing" target="_blank"
+              class="link text-blue-800">en
             </NuxtLink>
           </p>
         </div>
@@ -141,7 +147,7 @@ const localePath = useLocalePath()
       "websiteT": "Site Pessoal: ",
       "websiteP": "www.rafalves.website",
       "emailT": "Email:",
-      "emailP": "rafalves.costa%{at}gmail.com",
+      "emailP": " rafalves.costa%{at}gmail.com",
       "linkedinT": "LinkedIn: ",
       "linkedinP": "www.linkedin.com/in/rafael-alves-costa",
       "githubT": "GitHub: ",
@@ -266,7 +272,7 @@ const localePath = useLocalePath()
       "websiteT": "Personal Website: ",
       "websiteP": "www.rafalves.website",
       "emailT": "Email:",
-      "emailP": "rafalves.costa%{at}gmail.com",
+      "emailP": " rafalves.costa%{at}gmail.com",
       "linkedinT": "LinkedIn: ",
       "linkedinP": "www.linkedin.com/in/rafael-alves-costa",
       "githubT": "GitHub: ",
