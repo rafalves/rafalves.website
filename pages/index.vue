@@ -39,15 +39,25 @@ const localePath = useLocalePath()
     </section>
 
     <section class=" bg-[#7527ce75]">
-      <div class="flex flex-col gap-3 text-center max-w-[1140px] my-10 mx-auto w-full px-2">
-        <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">{{ t('section_2.title') }}</h1>
-        <p class="text-xl tablet:text-3xl text-center mt-8 font-light"> {{ t('section_2.p1') }}
-        </p>
-      </div>
 
-      <div class="flex flex-col justify-center mb-10">
-        <div class="flex justify-center">
-          <img class="object-cover" src="/img/vector-1.webp" />
+      <div class="flex flex-col gap-3 text-center max-w-[1140px] my-10 mx-auto w-full px-2">
+
+        <div class="bg-white w-fit self-center px-10 py-5">
+          <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">{{ t('section_2.title') }}</h1>
+        </div>
+
+        <div class="flex justify-between">
+          <div class="bg-white w-1/3 self-center h-fit px-10 py-5 ">
+            <p class="text-xl tablet:text-3xl text-center font-light"> {{ t('section_2.p1') }}
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center mb-10">
+            <div class="flex justify-center">
+              <img class="object-cover" src="/img/vector-1.webp" />
+            </div>
+          </div>
+
         </div>
 
       </div>
