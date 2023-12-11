@@ -58,12 +58,13 @@ const localePath = useLocalePath()
 
       <div class="rounded-3xl py-10 pb-16 tablet:px-10 max-w-[1140px] mx-auto w-full">
 
-        <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold text-center my-10">{{ t('section_3.title') }}</h1>
-        <div class="grid grid-cols-3 gap-5 max-w-[1140px] mx-auto w-full">
+        <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold text-center my-10 px-5">{{ t('section_3.title') }}
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[1140px] mx-auto w-full">
 
           <div class="flex bg-white p-5">
             <div class="flex-1">
-              <p class="font-bold text-3xl text-center">{{ t('section_3.list.1.span') }}</p>
+              <p class="font-bold text-2xl tablet:text-3xl text-center">{{ t('section_3.list.1.span') }}</p>
               <p class="px-1 font-light text-lg mt-3">{{ t('section_3.list.1.p') }}</p>
             </div>
             <div class="mx-2 w-1/5 -mt-2">
@@ -73,7 +74,7 @@ const localePath = useLocalePath()
 
           <div class="flex bg-white p-5">
             <div class="flex-1">
-              <p class="font-bold text-3xl text-center">{{ t('section_3.list.2.span') }}</p>
+              <p class="font-bold text-2xl tablet:text-3xl text-center">{{ t('section_3.list.2.span') }}</p>
               <p class="px-1 font-light text-lg mt-3">{{ t('section_3.list.2.p') }}</p>
             </div>
             <div class="mx-2 w-1/5 -mt-2">
@@ -83,7 +84,7 @@ const localePath = useLocalePath()
 
           <div class="flex bg-white p-5">
             <div class="flex-1">
-              <p class="font-bold text-3xl text-center">{{ t('section_3.list.3.span') }}</p>
+              <p class="font-bold text-2xl tablet:text-3xl text-center">{{ t('section_3.list.3.span') }}</p>
               <p class="px-1 font-light text-lg mt-3">{{ t('section_3.list.3.p') }}</p>
             </div>
             <div class="mx-2 w-1/5 -mt-2">
@@ -93,7 +94,7 @@ const localePath = useLocalePath()
 
           <div class="flex bg-white p-5">
             <div class="flex-1">
-              <p class="font-bold text-3xl text-center">{{ t('section_3.list.4.span') }}</p>
+              <p class="font-bold text-2xl tablet:text-3xl text-center">{{ t('section_3.list.4.span') }}</p>
               <p class="px-1 font-light text-lg mt-3">{{ t('section_3.list.4.p') }}</p>
             </div>
             <div class="mx-2 w-1/5 -mt-2">
@@ -103,7 +104,7 @@ const localePath = useLocalePath()
 
           <div class="flex bg-white p-5">
             <div class="flex-1">
-              <p class="font-bold text-3xl text-center">{{ t('section_3.list.5.span') }}</p>
+              <p class="font-bold text-2xl tablet:text-3xl text-center">{{ t('section_3.list.5.span') }}</p>
               <p class="px-1 font-light text-lg mt-3">{{ t('section_3.list.5.p') }}</p>
             </div>
             <div class="mx-2 w-1/5 -mt-2">
@@ -113,7 +114,7 @@ const localePath = useLocalePath()
 
           <div class="flex bg-white p-5">
             <div class="flex-1">
-              <p class="font-bold text-3xl text-center">{{ t('section_3.list.6.span') }}</p>
+              <p class="font-bold text-2xl tablet:text-3xl text-center">{{ t('section_3.list.6.span') }}</p>
             </div>
             <div class="mx-2 w-1/5 -mt-2">
               <img src="/img/icon4.png" alt="">
@@ -130,7 +131,7 @@ const localePath = useLocalePath()
         <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold text-center">{{ t('services.title') }}
         </h1>
 
-        <div class="flex flex-col md:flex-row gap-3 mt-[15px] justify-between">
+        <div class="flex flex-col md:flex-row gap-3 mt-[15px] items-center md:items-start justify-between">
 
           <div class="bg-white p-5 w-[300px]">
             <p class="text-xl tablet:text-2xl font-bold text-center uppercase">{{
