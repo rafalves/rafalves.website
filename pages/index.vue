@@ -238,7 +238,7 @@ const localePath = useLocalePath()
   "pt-BR": {
     "page_title": "testes PTBRRRRRRRRR",
     "section_1": {
-      "p1": "Oi, eu sou o Rafael",
+      "p1": "Olá, sou o Rafael",
       "title": "Desenvolvedor de Software",
       "p2": "Construo ferramentas WEB que vão fazer você faturar mais",
       "p3": "Tem alguma ideia em mente? Vamos bater um papo sem compromisso, me chame no",
