@@ -1,8 +1,9 @@
 <template>
   <div class="fixed w-full glass">
-    <div class="flex justify-between gap-3 py-5 max-w-[1140px] mx-auto w-full">
+    <div class="flex justify-between gap-3  py-5 px-2 max-w-[1140px] md:mx-auto w-full">
       <NuxtLink :to="localePath('/')">
-        <span class="text-2xl font-museoModerno font-bold">
+        <span
+          class="text-2xl font-museoModerno font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700">
           rafalves.website
         </span>
       </NuxtLink>

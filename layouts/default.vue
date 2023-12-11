@@ -85,7 +85,11 @@ onMounted(() => {
       hsl(0deg 0% 100%) 0%,
       hsl(229deg 40% 89%) 64%,
       hsl(227deg 40% 78%) 100%);
-  background-repeat: no-repeat;
+  background-image: url(/img/dot-grid.png);
+  background-position: center center;
+  display: inline;
+  float: left;
+  /* background-repeat: no-repeat; */
   width: 100%;
   height: auto;
 }

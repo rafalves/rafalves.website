@@ -1,5 +1,5 @@
 <template>
-  <div class="md:hidden">
+  <div class="md:hidden px-2">
     <button @click="isOpen = !isOpen">
       <Icon name="noto:hamburger" size="30" />
     </button>
