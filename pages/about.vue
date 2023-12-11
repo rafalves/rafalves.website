@@ -1,8 +1,7 @@
 <template>
   <div class=" flex flex-col mt-20 gap-3 max-w-[1140px] mx-auto w-full">
     <div>
-      <p class="font-bold uppercase">{{ t('title.p1') }}</p>
-      <h1 class="text-2xl tablet:text-4xl font-extrabold uppercase">{{ t('title.p2') }}</h1>
+      <h1 class="text-2xl tablet:text-4xl font-extrabold uppercase text-center">Rafael Alves</h1>
     </div>
 
 
