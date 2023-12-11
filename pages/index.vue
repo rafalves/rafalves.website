@@ -6,7 +6,7 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <div class="flex flex-col mt-20 tablet:mt-32 break-words">
+  <div class="flex flex-col mt-10 tablet:mt-32 break-words">
 
     <section class="mx-2">
       <div class="flex flex-col tablet:flex-col justify-between gap-3 mt-16 max-w-[1140px] mx-auto w-full">
@@ -31,8 +31,60 @@ const localePath = useLocalePath()
               </span></button>
           </NuxtLink>
         </div>
+        <div class="bg-white w-fit self-center px-10 py-10">
+          <h2 class="text-xl tablet:text-2xl md:text-3xl font-extrabold pb-7 text-center">{{ t('section_1.p4') }}</h2>
+
+          <div class="flex gap-5 justify-center flex-wrap">
+            <div class="tooltip tooltip-info" data-tip="HTML">
+              <Icon name="skill-icons:html" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="CSS">
+              <Icon name="skill-icons:css" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="TailwindCSS">
+              <Icon name="skill-icons:tailwindcss-dark" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="JavaScript">
+              <Icon name="skill-icons:javascript" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="TypeScript">
+              <Icon name="skill-icons:typescript" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Vue 3">
+              <Icon name="skill-icons:vuejs-light" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Nuxt 3">
+              <Icon name="skill-icons:nuxtjs-dark" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Nodejs">
+              <Icon name="skill-icons:nodejs-light" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Expressjs">
+              <Icon name="skill-icons:expressjs-light" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Dart">
+              <Icon name="skill-icons:dart-light" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Flutter">
+              <Icon name="skill-icons:flutter-light" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="SQL">
+              <Icon name="devicon:azuresqldatabase" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Figma">
+              <Icon name="skill-icons:figma-dark" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="Git">
+              <Icon name="skill-icons:git" size="35" />
+            </div>
+            <div class="tooltip tooltip-info" data-tip="GitHub">
+              <Icon name="skill-icons:github-light" size="35" />
+            </div>
+
+          </div>
+
+        </div>
       </div>
-      <div class="h-[50px]" />
 
 
 
@@ -40,14 +92,14 @@ const localePath = useLocalePath()
 
     <section class=" bg-[#7527ce75]">
 
-      <div class="flex flex-col gap-3 text-center max-w-[1140px] my-10 mx-auto w-full px-2">
+      <div class="flex flex-col text-center max-w-[1140px] my-10 mx-auto w-full px-2 gap-5">
 
         <div class="bg-white w-fit self-center px-10 py-5">
           <h1 class="text-2xl tablet:text-3xl md:text-4xl font-extrabold">{{ t('section_2.title') }}</h1>
         </div>
 
-        <div class="flex justify-between">
-          <div class="bg-white w-1/3 self-center h-fit px-10 py-5 ">
+        <div class="flex flex-col justify-center tablet:flex-row tablet:justify-between gap-5">
+          <div class="bg-white tablet:w-1/3 self-center h-fit px-10 py-5 ">
             <p class="text-xl tablet:text-3xl text-center font-light"> {{ t('section_2.p1') }}
             </p>
           </div>
@@ -143,7 +195,7 @@ const localePath = useLocalePath()
 
         <div class="flex flex-col md:flex-row gap-3 mt-[15px] items-center md:items-start justify-between">
 
-          <div class="bg-white p-5 w-[300px]">
+          <div class="flex flex-col items-center bg-white p-5 min-h-[428px] w-[294px]">
             <p class="text-xl tablet:text-2xl font-bold text-center uppercase">{{
               t('services.website') }}</p>
             <ul class="pl-5 pt-2">
@@ -151,23 +203,38 @@ const localePath = useLocalePath()
                 <Icon name="" /> {{ rt(service.p) }}
               </li>
             </ul>
+            <div class="flex flex-col flex-1 justify-end">
+              <button class="place-self-end wppBtn w-fit tablet:my-5 uppercase whitespace-nowrap"><span>{{
+                t('services.contact') }}
+                </span></button>
+            </div>
           </div>
 
-          <div class="bg-white p-5 w-[276px]">
+          <div class="flex flex-col items-center bg-white p-5 min-h-[452px] w-[294px]">
             <p class="text-xl tablet:text-2xl font-bold text-center uppercase">{{
               t('services.system') }}</p>
             <ul class="pl-5 pt-2">
               <li v-for="service in tm('services.systems_list')" class="font-light pt-1">{{ rt(service.p) }}</li>
             </ul>
+            <div class="flex flex-col flex-1 justify-end">
+              <button class="place-self-end wppBtn w-fit tablet:my-5 uppercase whitespace-nowrap"><span>{{
+                t('services.contact') }}
+                </span></button>
+            </div>
           </div>
 
-          <div class="bg-white p-5 w-[276px]">
+          <div class="flex flex-col items-center bg-white p-5 min-h-[452px] w-[294px] h-full">
             <p class="text-xl tablet:text-2xl font-bold text-center uppercase">{{
               t('services.automation') }}
             </p>
             <ul class="pl-5 pt-2">
               <li v-for="service in tm('services.automation_list')" class="font-light pt-1">{{ rt(service.p) }}</li>
             </ul>
+            <div class="flex flex-col flex-1 justify-end">
+              <button class="place-self-end wppBtn w-fit tablet:my-5 uppercase whitespace-nowrap"><span>{{
+                t('services.contact') }}
+                </span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -252,6 +319,7 @@ const localePath = useLocalePath()
       "title": "Desenvolvedor de Software",
       "p2": "Construo ferramentas WEB que vão fazer você faturar mais",
       "p3": "Tem alguma ideia em mente? Vamos bater um papo sem compromisso, me chame no",
+      "p4": "Tecnologias",
       "cta": "Entre em contato"
     },
     "section_2": {
@@ -291,6 +359,7 @@ const localePath = useLocalePath()
       "website": "Sites",
       "system": "Sistemas",
       "automation": "Automatização",
+      "contact": "Saiba Mais",
       "websites_list": [
         {
           "p": "Sites Institucionais"
@@ -385,6 +454,7 @@ const localePath = useLocalePath()
       "title": "Software Developer",
       "p2": "I build WEB tools that will make you earn more",
       "p3": "Do you have any ideas in mind? Let's chat without obligation, call me on",
+      "p4": "Technologies",
       "cta": "Get in touch"
     },
     "section_2": {
@@ -424,6 +494,7 @@ const localePath = useLocalePath()
       "website": "Websites",
       "system": "Systems",
       "automation": "Automation",
+      "contact": "Learn More",
       "websites_list": [
         {
           "p": "Institutional Sites"
