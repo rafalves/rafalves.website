@@ -6,7 +6,7 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <div class="flex flex-col mt-10 tablet:mt-32 break-words">
+  <div class="flex flex-col mt-10 tablet:mt-32 break-words h-full">
 
     <section class="mx-2">
       <div class="flex flex-col tablet:flex-col justify-between gap-3 mt-16 max-w-[1140px] mx-auto w-full">

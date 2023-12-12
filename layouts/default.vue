@@ -1,7 +1,7 @@
 <template>
-  <Html data-theme="light" :lang="htmlAttrs.lang" class="scroll-smooth font-poppins relative bg-page">
-  <div>
-    <div class="flex flex-col h-full antialiased">
+  <Html data-theme="light" :lang="htmlAttrs.lang" class=" scroll-smooth font-poppins relative bg-page antialiased h-full">
+  <div class="flex flex-col h-full">
+    <div class="flex flex-col flex-1">
       <!-- <div class="flex flex-col h-full antialiased max-w-[1140px] mx-auto"> -->
       <div class="mb-5">
         <header>
@@ -9,7 +9,7 @@
         </header>
       </div>
 
-      <div class="flex-1">
+      <div>
         <div>
           <slot />
         </div>
@@ -91,7 +91,7 @@ onMounted(() => {
   float: left;
   /* background-repeat: no-repeat; */
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 </style>
 
