@@ -31,7 +31,7 @@ const localePath = useLocalePath()
               </span></button>
           </NuxtLink>
         </div>
-        <div class="bg-white w-fit self-center px-10 py-10">
+        <div class="bg-white w-fit self-center px-10 py-10 -z-10">
           <h2 class="text-xl tablet:text-2xl md:text-3xl font-extrabold pb-7 text-center">{{ t('section_1.p4') }}</h2>
 
           <div class="flex gap-5 justify-center flex-wrap">
@@ -82,12 +82,8 @@ const localePath = useLocalePath()
             </div>
 
           </div>
-
         </div>
       </div>
-
-
-
     </section>
 
     <section class=" bg-[#7527ce75]">
@@ -614,5 +610,26 @@ _section {
   100% {
     background-position: 0% 50%;
   }
+
+}
+
+.custom-shape-divider-top-1702413038 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1702413038 svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 46px;
+}
+
+.custom-shape-divider-top-1702413038 .shape-fill {
+  fill: #FFFFFF;
 }
 </style>
