@@ -1,9 +1,11 @@
 <template>
   <div class=" flex flex-col mt-20 gap-3 max-w-[1140px] mx-auto w-full">
-    <div>
+    <div class="flex justify-center space-x-4">
       <h1 class="text-2xl tablet:text-4xl font-extrabold uppercase text-center">Rafael Alves</h1>
+      <div class="rounded-full hover:bg-slate-100 p-2 -mt-3 cursor-pointer print:hidden" @click="print">
+        <Icon name="twemoji:printer" size="40" />
+      </div>
     </div>
-
 
     <div class="flex flex-col tablet:flex-row justify-between gap-5">
       <div class="mt-3">
@@ -23,7 +25,7 @@
           <p class="link link-hover inline italic text-blue-800">{{ t('info.githubP') }}</p>
         </NuxtLink>
       </div>
-      <div class="flex justify-center gap-5">
+      <div class="flex justify-center gap-5 print:hidden">
         <div class="flex flex-col  items-center">
           <div>
             <Icon name="vscode-icons:file-type-word2" size="60" color="blue" />
@@ -52,11 +54,11 @@
       </div>
     </div>
 
-    <div class="divider" />
+    <div class="divider print:hidden" />
     <h2 class="text-2xl tablet:text-3xl font-bold">{{ t('profile.p1') }}</h2>
     <p>{{ t('profile.p2') }}</p>
     <p>{{ t('profile.p3') }}</p>
-    <div class="divider" />
+    <div class="divider print:hidden" />
     <h2 class="text-2xl tablet:text-3xl font-bold">{{ t('skill.title') }}</h2>
     <div class="flex flex-col tablet:flex-row tablet:justify-between gap-5 tablet:w-[80%]">
       <div>
@@ -78,16 +80,16 @@
         </ul>
       </div>
     </div>
-    <div class="divider" />
+    <div class="divider print:hidden" />
     <h2 class="text-2xl tablet:text-3xl font-bold">{{ t('education.title') }}</h2>
     <p>{{ t('education.p1') }}</p>
     <p>{{ t('education.p2') }}</p>
     <p>{{ t('education.p3') }}</p>
-    <div class="divider" />
+    <div class="divider print:hidden" />
     <h2 class="text-2xl tablet:text-3xl font-bold">{{ t('language.title') }}</h2>
     <p>{{ t('language.p1') }}</p>
     <p>{{ t('language.p2') }}</p>
-    <div class="divider" />
+    <div class="divider print:hidden" />
     <h2 class="text-2xl tablet:text-3xl font-bold">{{ t('work.title') }}</h2>
     <p class="font-semibold italic mt-5 underline">{{ t('work.xp1.title') }}</p>
     <p class="font-medium italic ml-5">{{ t('work.xp1.activities') }}</p>
@@ -118,7 +120,7 @@
       <li class="list-none ml-5"><span class="font-medium">{{ t('work.xp3.t4') }}</span>{{ t('work.xp3.p4') }}
       </li>
     </ul>
-    <div class="h-[100px]" />
+    <div class="h-[100px] print:hidden" />
 
   </div>
 </template>
@@ -128,6 +130,10 @@ const { t, rt, tm } = useI18n({
   useScope: 'local',
 })
 const localePath = useLocalePath()
+
+function print() {
+  window.print()
+}
 </script>
 
 

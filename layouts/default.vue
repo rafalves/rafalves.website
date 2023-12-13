@@ -3,7 +3,7 @@
   <div class="flex flex-col h-full">
     <div class="flex flex-col flex-1">
       <!-- <div class="flex flex-col h-full antialiased max-w-[1140px] mx-auto"> -->
-      <div class="mb-5">
+      <div class="mb-5 print:hidden">
         <header>
           <Header />
         </header>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="bg-base-300">
+    <div class="bg-base-300 print:hidden">
       <Footer />
     </div>
   </div>
