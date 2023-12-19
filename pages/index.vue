@@ -102,7 +102,8 @@ const localePath = useLocalePath()
 
           <div class="flex flex-col justify-center mb-10">
             <div class="flex justify-center">
-              <img class="object-cover" src="/img/vector-1.webp" />
+              <img class="object-cover" src="/img/vector-1.webp"
+                alt="Desenho de uma mulher ao de diversos dispositivos tecnológicos" />
             </div>
           </div>
 
