@@ -197,7 +197,7 @@ const localePath = useLocalePath()
               t('services.website') }}</p>
             <ul class="pl-5 pt-2">
               <li v-for="service in tm('services.websites_list')" class="font-light pt-1">
-                <Icon name="" /> {{ rt(service.p) }}
+                <Icon name="material-symbols:fitbit-check-small" /> {{ rt(service.p) }}
               </li>
             </ul>
             <div class="flex flex-col flex-1 justify-end">
@@ -211,7 +211,9 @@ const localePath = useLocalePath()
             <p class="text-xl tablet:text-2xl font-bold text-center uppercase">{{
               t('services.system') }}</p>
             <ul class="pl-5 pt-2">
-              <li v-for="service in tm('services.systems_list')" class="font-light pt-1">{{ rt(service.p) }}</li>
+              <li v-for="service in tm('services.systems_list')" class="font-light pt-1">
+                <Icon name="material-symbols:fitbit-check-small" /> {{ rt(service.p) }}
+              </li>
             </ul>
             <div class="flex flex-col flex-1 justify-end">
               <button class="place-self-end wppBtn w-fit tablet:my-5 uppercase whitespace-nowrap"><span>{{
@@ -225,7 +227,9 @@ const localePath = useLocalePath()
               t('services.automation') }}
             </p>
             <ul class="pl-5 pt-2">
-              <li v-for="service in tm('services.automation_list')" class="font-light pt-1">{{ rt(service.p) }}</li>
+              <li v-for="service in tm('services.automation_list')" class="font-light pt-1">
+                <Icon name="material-symbols:fitbit-check-small" /> {{ rt(service.p) }}
+              </li>
             </ul>
             <div class="flex flex-col flex-1 justify-end">
               <button class="place-self-end wppBtn w-fit tablet:my-5 uppercase whitespace-nowrap"><span>{{
@@ -632,5 +636,4 @@ _section {
 
 .custom-shape-divider-top-1702413038 .shape-fill {
   fill: #FFFFFF;
-}
-</style>
+}</style>
