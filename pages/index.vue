@@ -239,6 +239,7 @@ const localePath = useLocalePath()
           </div>
         </div>
       </div>
+      <div></div>
     </section>
 
     <section>
@@ -636,4 +637,5 @@ _section {
 
 .custom-shape-divider-top-1702413038 .shape-fill {
   fill: #FFFFFF;
-}</style>
+}
+</style>
